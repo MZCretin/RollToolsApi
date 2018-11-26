@@ -167,6 +167,12 @@
 
 #### **指定日期的节假日及万年历信息**
 
+---
+
+**2018-11-26 18:07:28更新：** 节假日新增类型描述，比如【国庆,休息日,工作日】
+
+---
+
 - **接口说明：** 获取指定日期的节假日及万年历信息
 
 - **接口地址：** [HOST]/holiday/single/{date}  【例如： [HOST]/holiday/single/20181121】
@@ -177,9 +183,9 @@
 
   - **date：** 当前日期
   - **weekDay：** 当前周第几天 1-周一 2-周二 ... 7-周日
-
   - **yearTips：** 天干地支纪年法描述 例如：戊戌
   - **type：** 类型 0 工作日 1 假日 2 节假日
+  - **typeDes：** 类型描述 比如 国庆,休息日,工作日
   - **date：** 当前日期
   - **chineseZodiac：** 属相 例如：狗
   - **solarTerms：** 节气描述 例如：小雪
@@ -201,6 +207,7 @@
           "type": 1,
           "chineseZodiac": "狗",
           "solarTerms": "小雪后",
+          "typeDes" : "休息日",
           "avoid": "移徙.入宅.安门.作梁.安葬",
           "lunarCalendar": "10-18",
           "suit": "祭祀.祈福.求嗣.斋醮.沐浴.冠笄.出行.理发.拆卸.解除.起基.动土.定磉.安碓硙.开池.掘井.扫舍.除服.成服.移柩.启攒.立碑.谢土",
@@ -224,6 +231,7 @@
   - **weekDay：** 当前周第几天 1-周一 2-周二 ... 7-周日
   - **yearTips：** 天干地支纪年法描述 例如：戊戌
   - **type：** 类型 0 工作日 1 假日 2 节假日
+  - **typeDes：** 类型描述 比如 国庆,休息日,工作日
   - **date：** 当前日期
   - **chineseZodiac：** 属相 例如：狗
   - **solarTerms：** 节气描述 例如：小雪
@@ -248,6 +256,7 @@
               "solarTerms": "冬至后",
               "avoid": "出行.安葬.修坟.开市",
               "lunarCalendar": "11-15",
+              "typeDes" : "元旦",
               "suit": "祭祀.塑绘.开光.裁衣.冠笄.嫁娶.纳采.拆卸.修造.动土.竖柱.上梁.安床.移徙.入宅.安香.结网.捕捉.畋猎.伐木.进人口.放水",
               "dayOfYear": 1,
               "weekOfYear": 1
@@ -259,6 +268,7 @@
               "type": 0,
               "chineseZodiac": "狗",
               "solarTerms": "寒露后",
+              "typeDes" : "工作日",
               "avoid": "造庙.嫁娶.掘井.栽种.造桥.作灶.动土",
               "lunarCalendar": "9-2",
               "suit": "祭祀.开光.出行.解除.伐木.作梁.出火.拆卸.入宅.移徙.安床.修造.造畜椆栖.扫舍",
@@ -270,6 +280,7 @@
               "weekDay": 4,
               "yearTips": "戊戌",
               "type": 0,
+              "typeDes" : "工作日",
               "chineseZodiac": "狗",
               "solarTerms": "寒露后",
               "avoid": "入宅.上梁.斋醮.出火.谢土",
@@ -296,6 +307,7 @@
   - **weekDay：** 当前周第几天 1-周一 2-周二 ... 7-周日
   - **yearTips：** 天干地支纪年法描述 例如：戊戌
   - **type：** 类型 0 工作日 1 假日 2 节假日
+  - **typeDes：** 类型描述 比如 国庆,休息日,工作日
   - **date：** 当前日期
   - **chineseZodiac：** 属相 例如：狗
   - **solarTerms：** 节气描述 例如：小雪
@@ -318,6 +330,7 @@
               "yearTips": "丁酉",
               "type": 0,
               "chineseZodiac": "鸡",
+              "typeDes" : "工作日",
               "solarTerms": "大寒后",
               "avoid": "开仓.嫁娶.移徙.入宅",
               "lunarCalendar": "12-16",
@@ -332,6 +345,7 @@
               "yearTips": "戊戌",
               "type": 0,
               "chineseZodiac": "狗",
+              "typeDes" : "工作日",
               "solarTerms": "雨水后",
               "avoid": "掘井",
               "lunarCalendar": "1-13",
@@ -358,6 +372,7 @@
   - **weekDay：** 当前周第几天 1-周一 2-周二 ... 7-周日
   - **yearTips：** 天干地支纪年法描述 例如：戊戌
   - **type：** 类型 0 工作日 1 假日 2 节假日
+  - **typeDes：** 类型描述 比如 国庆,休息日,工作日
   - **date：** 当前日期
   - **chineseZodiac：** 属相 例如：狗
   - **solarTerms：** 节气描述 例如：小雪
@@ -384,6 +399,7 @@
                       "type": 2,
                       "chineseZodiac": "鸡",
                       "solarTerms": "冬至后",
+                      "typeDes" : "元旦",
                       "avoid": "出行.安葬.修坟.开市",
                       "lunarCalendar": "11-15",
                       "suit": "祭祀.塑绘.开光.裁衣.冠笄.嫁娶.纳采.拆卸.修造.动土.竖柱.上梁.安床.移徙.入宅.安香.结网.捕捉.畋猎.伐木.进人口.放水",
@@ -397,6 +413,7 @@
                       "yearTips": "丁酉",
                       "type": 0,
                       "chineseZodiac": "鸡",
+                      "typeDes" : "工作日",
                       "solarTerms": "大寒后",
                       "avoid": "嫁娶.入殓.安葬.出行",
                       "lunarCalendar": "12-15",
@@ -416,6 +433,7 @@
                       "yearTips": "戊戌",
                       "type": 1,
                       "chineseZodiac": "狗",
+                      "typeDes" : "休息日",
                       "solarTerms": "小雪后",
                       "avoid": "作灶.治病",
                       "lunarCalendar": "10-24",

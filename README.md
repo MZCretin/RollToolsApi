@@ -5,6 +5,14 @@
 
 -----
 
+## 更新记录
+
+**2018年11月27日23:14:49**
+
++ 新增天气查询的api接口
+
+-----
+
 ## 目录
 
  * [通用](#通用)
@@ -24,9 +32,12 @@
      * [四、IP地址信息](#四ip地址信息)
           * [<strong>获取访问者的ip地址信息</strong>](#获取访问者的ip地址信息)
           * [<strong>获取指定ip的ip地址信息</strong>](#获取指定ip的ip地址信息)
-     * [五、其他小工具](#五其他小工具)
+     * [五、小工具](#五小工具)
           * [<strong>获取不重复长ID</strong>](#获取不重复长id)
           * [<strong>获取不重复短ID</strong>](#获取不重复短id)
+     * [六、天气信息](#六天气信息)
+          + [<strong>获取特定城市今日天气</strong>](#获取特定城市今日天气)
+          + [<strong>获取特定城市今天及未来天气</strong>](#获取特定城市今天及未来天气)
 
 ----
 
@@ -49,6 +60,7 @@
   ```
 
 + **数据返回格式说明（下面所有接口中的数据返回都是基于data的，不再介绍code和msg，请知悉）：**
+
   + **code：** 状态码 1 返回成功 0 返回失败 此时，请关注msg错误信息
   + **msg：** 提示信息，当code返回0的时候包含错误提示信息
   + **data：** 主要信息，不同接口返回的东西不一样
@@ -651,7 +663,7 @@
   }
   ```
 
-### 五、其他小工具
+### 五、小工具
 
 #### **获取不重复长ID**
 
@@ -702,4 +714,97 @@
   }
   ```
 
+### 六、天气信息
 
+#### **获取特定城市今日天气**
+
+- **接口说明：** 获取特定城市今日天气信息
+
+- **接口地址：** [HOST]/weather/current/{城市名}   【例如： [HOST]/weather/current/深圳市】
+
+- **参数说明：** {城市名}  传入你需要查询的城市，请尽量传入完整值，否则系统会自行匹配，可能会有误差
+
+- **返回数据：** 
+
+  - **address：** 城市具体信息，比如 “广东省 深圳市”
+  - **cityCode：** 城市code
+  - **temp：** 温度值
+  - **weather：** 天气描述
+  - **windDirection：** 风向描述
+  - **windPower：** 风力描述
+  - **humidity：** 湿度值
+  - **reportTime：** 此次天气发布时间
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "address": "广东省 深圳市",
+          "cityCode": "440300",
+          "temp": "18℃",
+          "weather": "小雨",
+          "windDirection": "东北",
+          "windPower": "≤3级",
+          "humidity": "92%",
+          "reportTime": "2018-11-27 22:40:53"
+      }
+  }
+  ```
+
+
+#### **获取特定城市今天及未来天气**
+
+- **接口说明：** 获取特定城市今天及未来天气信息
+
+- **接口地址：** [HOST]/weather/forecast/{城市名}   【例如： [HOST]/weather/forecast/深圳市】
+
+- **参数说明：** {城市名}  传入你需要查询的城市，请尽量传入完整值，否则系统会自行匹配，可能会有误差
+
+- **返回数据：** 
+
+  - **address：** 城市具体信息，比如 “广东省 深圳市”
+  - **cityCode：** 城市code
+  - **reportTime：** 此次天气发布时间
+  - **forecasts：** 今天及未来天气列表
+    - **date：** 日期
+    - **dayOfWeek：** 星期
+    - **dayWeather：** 白天天气描述
+    - **nightWeather：** 晚上天气描述
+    - **dayTemp：** 白天温度
+    - **nightTemp：** 晚上温度
+    - **dayWindDirection：** 白天风向
+    - **nightWindDirection：** 晚上风向
+    - **dayWindPower：** 白天风力
+    - **nightWindPower：** 晚上风力
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "address": "广东省 深圳市",
+          "cityCode": "440300",
+          "reportTime": "2018-11-27 22:40:53",
+          "forecasts": [
+              {
+                  "date": "2018-11-27",
+                  "dayOfWeek": "2",
+                  "dayWeather": "阵雨",
+                  "nightWeather": "小雨",
+                  "dayTemp": "22℃",
+                  "nightTemp": "17℃",
+                  "dayWindDirection": "无风向",
+                  "nightWindDirection": "无风向",
+                  "dayWindPower": "≤3级",
+                  "nightWindPower": "≤3级"
+              },
+              ...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```

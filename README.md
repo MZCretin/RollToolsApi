@@ -38,7 +38,7 @@
 
 ## 通用
 
-+ **HOST地址：** **http://www.mxnzp.com/tools**
++ **HOST地址：** **http://www.mxnzp.com/api**
 
 + **说明：** 所有的接口都会返回如下格式的数据，具体数据包装在data中，需要根据状态来确定请求是否成功。
 

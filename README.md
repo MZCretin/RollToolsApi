@@ -82,9 +82,9 @@
 
 由于服务器端的维护已经部分接口的维护都是需要付费的，所以如果此项目对您有帮助，还希望您捐赠支持，让我能好好的一直坚持下去。金额不在于多少，一份心意就好！
 
-<img src="./png/alipay_small.jpeg" width="300px”/>
+<img src="./png/alipay_small.jpeg"/>
 
-<img src="./png/wechat_small.jpeg" width="300px”/>
+<img src="./png/wechat_small.jpeg"/>
 
 -----
 

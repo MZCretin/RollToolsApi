@@ -1242,7 +1242,6 @@
           "goodsName": "脉动维生素饮料（水蜜桃口味）600ml",
           "barcode": "6902538005141",
           "price": "3.80",
-          "img": "http://www.anccnet.com/userfile/uploada/gra/1608173616/06902538005141/m06902538005141.1.jpg",
           "brand": "达能",
           "supplier": "达能(中国)食品饮料有限公司",
           "standard": "600ml"

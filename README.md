@@ -60,7 +60,7 @@
 
 ## 通用
 
-+ **HOST地址：** **推荐使用https接口更安全：https://www.mxnzp.com/api，** 之前的 http:/www.mxnzp.com 可继续使用不受影响！
++ **HOST地址：** **推荐使用https接口更安全：https://www.mxnzp.com/api，** 之前的 **http:/www.mxnzp.com** 可继续使用不受影响！
 
 + **说明：** 所有的接口都会返回如下格式的数据，具体数据包装在data中，需要根据状态来确定请求是否成功。
 

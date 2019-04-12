@@ -11,7 +11,7 @@
 
 随着使用本api用户的增多，每一次对服务器的升级维护，都需要格外小心，否则将会影响到用户的使用。特此创建了一个交流群，**旨在交流使用通用接口中遇到的问题，以及其他新接口的建议，有新接口的诞生也方便通知大家！另外一个作用就是，如果接口需要停机维护，会提前在群中通知，以免对大家的使用带来不便以及损失！**考虑到现在使用qq的人越来越少，就创建了一个微信交流群，**当前微信群已超过100人，无法通过群二维码的**，所以您可以直接**扫描我的微信二维码（图二）添加我**，我拉你入群（备注下通用API），感谢您的支持。
 
-<div style="background:#e3e3e3; color:#FFF" align=center ><img width="220" height="300" src="./png/api.jpeg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="300" src="./png/me.jpeg"/></div>
+<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/></div>
 
 -----
 

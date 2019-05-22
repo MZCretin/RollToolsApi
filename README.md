@@ -25,7 +25,6 @@
           * [<strong>指定期号中奖号码</strong>](#指定期号中奖号码)
           * [<strong>最新中奖号码信息</strong>](#最新中奖号码信息)
           * [<strong>获取双色球中奖信息列表</strong>](#获取双色球中奖信息列表)
-
      * [二、节假日及万年历](#二节假日及万年历)
           * [<strong>指定日期的节假日及万年历信息</strong>](#指定日期的节假日及万年历信息)
           * [<strong>指定多个日期的节假日及万年历信息</strong>](#指定多个日期的节假日及万年历信息)
@@ -33,46 +32,43 @@
           * [<strong>指定月份指定类型的所有的节假日及万年历信息</strong>](#指定月份指定类型的所有的节假日及万年历信息)
           * [<strong>指定年份所有的节假日及万年历信息</strong>](#指定年份所有的节假日及万年历信息)
           * [<strong>指定年份指定类型的所有的节假日及万年历信息</strong>](#指定年份指定类型的所有的节假日及万年历信息)
-
      * [三、全国城市列表（全国地级市API，数据来源国家统计局），世界城市列表](#三全国城市列表全国地级市api数据来源国家统计局，世界城市列表)
 
           * [<strong>全国城市列表</strong>](#全国城市列表)
           * [<strong>搜索全国城市列表</strong>](#搜索全国城市列表)
           * [<strong>世界级国家城市列表</strong>](#世界级国家城市列表)
-
      * [四、IP地址信息](#四ip地址信息)
           * [<strong>获取访问者的ip地址信息</strong>](#获取访问者的ip地址信息)
           * [<strong>获取指定ip的ip地址信息</strong>](#获取指定ip的ip地址信息)
-
      * [五、小工具](#五小工具)
           * [<strong>获取不重复长ID</strong>](#获取不重复长id)
           * [<strong>获取不重复短ID</strong>](#获取不重复短id)
-
      * [六、天气信息](#六天气信息)
           + [<strong>获取特定城市今日天气</strong>](#获取特定城市今日天气)
           + [<strong>获取特定城市今天及未来天气</strong>](#获取特定城市今天及未来天气)
-
      * [七、笑话段子](#七笑话段子)
           + [<strong>分页获取笑话段子列表</strong>](#分页获取笑话段子列表)
           + [<strong>随机获取笑话段子列表</strong>](#随机获取笑话段子列表)
-
      * [八、生成二维码](#八生成二维码)
           + [<strong>生成单一二维码</strong>](#生成单一二维码)
           + [<strong>生成带logo二维码</strong>](#生成带logo二维码)
-
      * [九、条形码相关](#九条形码相关)
           + [<strong>生成指定条形码</strong>](#生成指定条形码)
           + [<strong>获取条形码对应的商品信息</strong>](#获取条形码对应的商品信息)
-
      * [十、生成随机图片验证码](#十生成随机图片验证码)
 
           + [<strong>生成随机图片验证码</strong>](#生成随机图片验证码)
-
      * [十一、世界电话区号列表](#十一世界电话区号列表)
-
-          - [<strong>世界电话区号列表</strong>](#世界电话区号列表)
-
-          
+          * [<strong>世界电话区号列表</strong>](#世界电话区号列表)
+     * [十二、音乐相关接口](#十二音乐相关接口)
+          * [<strong>获取每日音乐推荐列表</strong>](#获取每日音乐推荐列表)
+          * [<strong>获取榜单列表</strong>](#获取榜单列表)
+          * [<strong>获取指定榜单的歌曲列表</strong>](#获取指定榜单的歌曲列表)
+          * [<strong>搜索歌曲</strong>](#搜索歌曲)
+          * [<strong>获取歌曲详情</strong>](#获取歌曲详情)
+          * [<strong>搜索歌手</strong>](#搜索歌手)
+          * [<strong>获取歌手详情</strong>](#获取歌手详情)
+          * [<strong>获取歌手所有的歌曲列表</strong>](#获取歌手所有的歌曲列表)
 
 ----
 
@@ -103,6 +99,10 @@
 ----
 
 ## 更新记录
+
+**2019年05月22日13:07:41**
+
++ 新增音乐相关接口，拥有这些接口，基本上可以实现一个小的音乐播放器，[查看说明](#十二音乐相关接口)
 
 **2019年05月15日11:57:20**
 
@@ -1430,8 +1430,11 @@
 #### **世界电话区号列表**
 
 - **接口说明：** 获取世界电话区号列表。
+
 - **接口地址：** [HOST]/phone_code/list   
+
 - **参数说明：** 无
+
 - **返回数据：** 
   - **zhCn：** 中文名称
   - **enUs：** 英文名称
@@ -1440,9 +1443,7 @@
 - **数据样例：** 
 
   ```java
-  
   {
-  
       "code": 1,
       "msg": "数据返回成功",
       "data": [
@@ -1450,16 +1451,6 @@
               "zhCn": "中国",
               "enUs": "China",
               "phoneCode": "+86"
-          },
-          {
-              "zhCn": "台湾",
-              "enUs": "Taiwan",
-              "phoneCode": "+886"
-          },
-          {
-              "zhCn": "香港",
-              "enUs": "Hong Kong (SAR)",
-              "phoneCode": "+852"
           },
           {
               "zhCn": "澳门",
@@ -1471,8 +1462,335 @@
               "enUs": "Afghanistan",
               "phoneCode": "+93"
           }
+        	...这里只显示了三条数据...
       ]
   }
   ```
 
+
+### 十二、音乐相关接口
+
+#### **获取每日音乐推荐列表**
+
+- **接口说明：** 获取每日音乐推荐列表。
+- **接口地址：** [HOST]/music/recommend/list   【例如： [HOST]/music/recommend/list】
+- **参数说明：** 无
+- **返回数据：** 
+  - **pic_huge：** 最大的图片地址
+  - **ting_uid：** 歌手id
+  - **si_proxycompany：** 公司信息
+  - **author：** 歌手姓名
+  - **info：** 音乐描述
+  - **album_title：** 专辑名称
+  - **title：** 音乐名称
+  - **language：** 音乐语言
+  - **pic_big：** 歌曲大图
+  - **pic_singer**：歌手图片
+  - **publishtime：** 发布时间
+  - **pic_premium：** 歌曲图片-中
+  - **pic_small：** 歌曲图片-小
+  - **song_id：** 歌曲id，查询歌曲详情需要用到
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "pic_huge": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_1000,h_1000",
+              "ting_uid": "1108",
+              "si_proxycompany": "滚石国际音乐股份有限公司",
+              "author": "成龙",
+              "info": "电影《黄飞鸿Ⅱ之男儿当自强》主题曲",
+              "album_title": "成龙超级精装大戏主题曲",
+              "title": "男儿当自强",
+              "language": "国语",
+              "pic_big": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_150,h_150",
+              "pic_singer": "",
+              "publishtime": "1995-01-21",
+              "pic_premium": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_500,h_500",
+              "song_id": "228311",
+              "pic_small": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_90,h_90"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取榜单列表**
+
+- **接口说明：** 获取每日音乐推荐列表。
+- **接口地址：** [HOST]/music/order/list   【例如： [HOST]/music/order/list】
+- **参数说明：** 无
+- **返回数据：** 
+  - **name：** 榜单名称
+  - **type：** 榜单类型，查询榜单歌曲列表需要用到
+  - **comment：** 榜单描述
+  - **pic_s192：** 榜单图片1
+  - **pic_s444：** 榜单图片2
+  - **pic_s260：** 榜单图片3
+  - **pic_s210：** 榜单图片4
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "name": "热歌榜",
+              "type": 2,
+              "comment": "该榜单是根据音乐平台歌曲每周播放量自动生成的数据榜单，统计范围为音乐平台上的全部歌曲，每日更新一次",
+              "pic_s192": "图片链接",
+              "pic_s444": "图片链接",
+              "pic_s260": "图片链接",
+              "pic_s210": "图片链接"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取指定榜单的歌曲列表**
+
+- **接口说明：** 获取指定榜单类型的歌曲列表。需要传入榜单类型type
+- **接口地址：** [HOST]/music/order/song/list  【例如： [HOST]/music/order/song/list?type=2&page=1】
+- **参数说明：** type：榜单列表中的榜单类型；page：页数(从1开始)
+- **返回数据：** 
+  - **language：** 音乐语言
+  - **publishtime：** 发布时间
+  - **pic_big：** 音乐大图地址
+  - **country：** 音乐所属国家
+  - **lrclink：** 歌词地址
+  - **file_duration：** 音乐时长
+  - **si_proxycompany：** 公司信息
+  - **song_id：** 音乐id，查询音乐详情需要
+  - **title：** 音乐名称
+  - **ting_uid：** 歌手id，查询歌手信息可用
+  - **author：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 1267,
+          "totalPage": 127,
+          "limit": 10,
+          "list": [
+              {
+                  "language": "国语",
+                  "publishtime": "2018-07-26",
+                  "pic_big": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_150,h_150",
+                  "pic_small": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_90,h_90",
+                  "country": "内地",
+                  "lrclink": "http://qukufile2.qianqian.com/data2/lrc/3bfe46c3621abf2bc89f50969a74c9a2/612356232/612356232.lrc",
+                  "file_duration": null,
+                  "si_proxycompany": "星空盛典影业（北京）有限公司",
+                  "song_id": "601427388",
+                  "title": "卡路里（电影《西虹市首富》插曲）",
+                  "ting_uid": "340442495",
+                  "author": "火箭少女101"
+              }
+              ...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
+#### **搜索歌曲**
+
+- **接口说明：** 搜索歌曲
+- **接口地址：** [HOST]/music/song/search  【例如： [HOST]/music/song/search?keyWord=稻香】
+- **参数说明：** keyWord：被搜索的歌曲关键字
+- **返回数据：** 
+  - **id：** 音乐id，查询音乐详情需要
+  - **songName：** 音乐名称
+  - **albumName：** 专辑名称
+  - **artistName：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 18,
+          "totalPage": 1,
+          "limit": 30,
+          "list": [
+              {
+                  "songName": "稻香",
+                  "artistName": "周杰伦",
+                  "albumName": "《魔杰座》",
+                  "id": "1390840"
+              }
+            	...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
+#### **获取歌曲详情**
+
+- **接口说明：** 根据歌曲id获取歌曲详情
+- **接口地址：** [HOST]/music/song/detail  【例如： [HOST]/music/song/detail?songId=114921778】
+- **参数说明：** songId：被搜索的歌曲id
+- **返回数据：** 
+  - **id：** 音乐id，查询音乐详情需要
+  - **songName：** 音乐名称
+  - **albumName：** 专辑名称
+  - **artistName：** 歌手姓名
+  - **songPic：** 歌曲图片
+  - **lrcLink：** 歌词地址
+  - **time：** 歌曲时长/秒
+  - **songLink：** 歌曲下载地址
+  - **format：** 歌曲格式
+  - **rate：** 歌曲rate
+  - **size：** 歌曲文件大小
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "songName": "活出个样给自己看",
+          "artistName": "衡越",
+          "albumName": "圆梦",
+          "songPic": "http://qukufile2.qianqian.com/data2/pic/09F3D02F6BF46E1425A81A0E6744B1B8/252053022/252053022.jpg@s_2,w_300,h_300",
+          "lrcLink": "http://qukufile2.qianqian.com/data2/lrc/f3eb5904d6294625313cd35042c11a4b/601822333/601822333.lrc",
+          "time": 131,
+          "songLink": "http://zhangmenshiting.qianqian.com/data2/music/c5d8ff96a500d5bce48b0994ad72f367/601820410/114921778208800128.mp3?xcode=8f0f22538cd02392cc3224dc97e4d7a9",
+          "format": "mp3",
+          "rate": 128,
+          "size": 2102206
+      }
+  }
+  ```
+
+#### **搜索歌手**
+
+- **接口说明：** 搜索歌手信息
+- **接口地址：** [HOST]/music/singer/search 【例如： [HOST]/music/singer/search?keyWord=周杰伦】
+- **参数说明：** keyWord：被搜索的歌手关键字
+- **返回数据：** 
+  - **singerId：** 歌手id，查询歌手详情需要
+  - **singerPic：** 歌手图片
+  - **singerName：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "singerName": "周杰伦",
+              "singerId": "7994",
+              "singerPic": "http://qukufile2.qianqian.com/data2/pic/046d17bfa056e736d873ec4f891e338f/540336142/540336142.jpg@s_2,w_48,h_48"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取歌手详情**
+
+- **接口说明：** 通过歌手id获取歌手详情
+- **接口地址：** [HOST]/music/singer/detail 【例如： [HOST]/music/singer/detail?singerId=340442495】
+- **参数说明：** singerId：被搜索的歌手id
+- **返回数据：** 
+  - **singerId：** 歌手id
+  - **stature：** 身高
+  - **avatar：** 头像
+  - **constellation：** 星座
+  - **intro：** 介绍
+  - **company：** 公司
+  - **country：** 国际
+  - **birth：** 生日
+  - **name：** 姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "stature": "",
+          "avatar": "http://qukufile2.qianqian.com/data2/pic/6f1e938177547e7c337cc50463f8f2ce/610195446/610195446.jpg@s_2,w_500,h_500",
+          "constellation": "巨蟹",
+          "intro": "火箭少女101是由哇唧唧哇娱乐于2018年推出的中国内地女子演唱组合，由孟美岐、吴宣仪、杨超越、段奥娟、Yamy、赖美云、张紫宁、杨芸晴、李紫婷、傅菁、徐梦洁十一位成员组成 。\n\n2018年6月23日，11位成员在腾讯视频女团青春成长节目《创造101》中获胜，成功获得成团资格；同日，发行单曲《Rocket Girls》；24日，通过湖南卫视《快乐中国毕业歌会》完成成团首秀；7月12日，首部团体综艺节目《火箭少女101研究所》首播；27日，为电影《西虹市首富》演唱插曲《卡路里》。",
+          "company": "",
+          "country": "中国",
+          "artist_id": "601427383",
+          "birth": "2018-06-23",
+          "name": "火箭少女101",
+          "singerId": "340442495"
+      }
+  }
+  ```
+
+#### **获取歌手所有的歌曲列表**
+
+- **接口说明：** 通过歌手id获取歌手所有的单曲列表
+- **接口地址：** [HOST]/music/singer/song/list 【例如： [HOST]/music/singer/song/list?singerId=340442495&page=1】
+- **参数说明：** singerId：被查询的歌手id ；page：页数(从1开始)
+- **返回数据：** 
+  - **language：** 音乐语言
+  - **publishtime：** 发布时间
+  - **pic_big：** 音乐大图地址
+  - **country：** 音乐所属国家
+  - **lrclink：** 歌词地址
+  - **file_duration：** 音乐时长
+  - **si_proxycompany：** 公司信息
+  - **song_id：** 音乐id，查询音乐详情需要
+  - **title：** 音乐名称
+  - **ting_uid：** 歌手id，查询歌手信息可用
+  - **author：** 歌手姓名
+
+- **数据样例：** 
+
+- ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 4,
+          "totalPage": 1,
+          "limit": 10,
+          "list": [
+              {
+                  "language": "国语",
+                  "publishtime": "2018-07-26",
+                  "pic_big": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_150,h_150",
+                  "pic_small": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_90,h_90",
+                  "country": "内地",
+                  "lrclink": "http://qukufile2.qianqian.com/data2/lrc/3bfe46c3621abf2bc89f50969a74c9a2/612356232/612356232.lrc",
+                  "file_duration": "232",
+                  "si_proxycompany": "星空盛典影业（北京）有限公司",
+                  "song_id": "601427388",
+                  "title": "卡路里（电影《西虹市首富》插曲）",
+                  "ting_uid": "340442495",
+                  "author": "火箭少女101"
+              }
+              ...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
   
+

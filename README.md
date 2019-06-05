@@ -1607,8 +1607,8 @@
 #### **搜索歌曲**
 
 - **接口说明：** 搜索歌曲
-- **接口地址：** [HOST]/music/song/search  【例如： [HOST]/music/song/search?keyWord=稻香】
-- **参数说明：** keyWord：被搜索的歌曲关键字
+- **接口地址：** [HOST]/music/song/search  【例如： [HOST]/music/song/search?keyWord=稻香&page=1】
+- **参数说明：** keyWord：被搜索的歌曲关键字，page：页数
 - **返回数据：** 
   - **id：** 音乐id，查询音乐详情需要
   - **songName：** 音乐名称
@@ -1792,5 +1792,35 @@
   }
   ```
 
-  
 
+### 十三、手机号码归属地
+
+#### **手机号码归属地查询**
+
+- **接口说明：** 手机号码归属地查询。
+
+- **接口地址：** [HOST]/mobile_location/aim_mobile 【例如： [HOST]/mobile_location/aim_mobile?mobile=13227293721（这不是我手机号，不要加我微信撩我）】
+
+- **参数说明：** mobile：目标手机号码
+
+- **返回数据：** 
+
+  - **mobile：** 目标手机号
+  - **province：** 归属地省份
+  - **carrier：** 归属地描述
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "mobile": "13227293721",
+          "province": "湖北",
+          "carrier": "湖北联通"
+      }
+  }
+  ```
+
+  

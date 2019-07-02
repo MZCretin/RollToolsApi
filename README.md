@@ -9,6 +9,8 @@
 
 **各位开发者，请不要在自建服务器中调用本站接口并转发数据，一经发现，将永久封停！请尊重别人的劳动成果！**
 
+**最近问的一个比较多的问题就是，接口访问404，在这里我想说，请各位大佬仔细阅读文档，仔细阅读文档，仔细阅读文档，尤其是"通用"模块的文档，我们的Host地址是域名+/api，不是纯域名，不要再来问题这个问题了。。。**
+
 随着使用本api用户的增多，每一次对服务器的升级维护，都需要格外小心，否则将会影响到用户的使用。特此创建了一个交流群，**旨在交流使用通用接口中遇到的问题，以及其他新接口的建议，有新接口的诞生也方便通知大家！另外一个作用就是，如果接口需要停机维护，会提前在群中通知，以免对大家的使用带来不便以及损失！**考虑到现在使用qq的人越来越少，就创建了一个微信交流群，**当前微信群已超过100人，无法通过群二维码的**，所以您可以直接**扫描我的微信二维码（图二）添加我**，我拉你入群（备注下通用API），感谢您的支持。
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/></div>
@@ -32,15 +34,18 @@
           * [<strong>指定月份指定类型的所有的节假日及万年历信息</strong>](#指定月份指定类型的所有的节假日及万年历信息)
           * [<strong>指定年份所有的节假日及万年历信息</strong>](#指定年份所有的节假日及万年历信息)
           * [<strong>指定年份指定类型的所有的节假日及万年历信息</strong>](#指定年份指定类型的所有的节假日及万年历信息)
-     * [三、全国城市列表（全国地级市API，数据来源国家统计局）](#三全国城市列表全国地级市api数据来源国家统计局)
+     * [三、全国城市列表（全国地级市API，数据来源国家统计局），世界城市列表](#三全国城市列表全国地级市api数据来源国家统计局，世界城市列表)
+
           * [<strong>全国城市列表</strong>](#全国城市列表)
           * [<strong>搜索全国城市列表</strong>](#搜索全国城市列表)
+          * [<strong>世界级国家城市列表</strong>](#世界级国家城市列表)
      * [四、IP地址信息](#四ip地址信息)
           * [<strong>获取访问者的ip地址信息</strong>](#获取访问者的ip地址信息)
           * [<strong>获取指定ip的ip地址信息</strong>](#获取指定ip的ip地址信息)
      * [五、小工具](#五小工具)
           * [<strong>获取不重复长ID</strong>](#获取不重复长id)
           * [<strong>获取不重复短ID</strong>](#获取不重复短id)
+          * [<strong>获取服务器时间</strong>](#获取服务器时间)
      * [六、天气信息](#六天气信息)
           + [<strong>获取特定城市今日天气</strong>](#获取特定城市今日天气)
           + [<strong>获取特定城市今天及未来天气</strong>](#获取特定城市今天及未来天气)
@@ -54,7 +59,27 @@
           + [<strong>生成指定条形码</strong>](#生成指定条形码)
           + [<strong>获取条形码对应的商品信息</strong>](#获取条形码对应的商品信息)
      * [十、生成随机图片验证码](#十生成随机图片验证码)
+
           + [<strong>生成随机图片验证码</strong>](#生成随机图片验证码)
+     * [十一、世界电话区号列表](#十一世界电话区号列表)
+          * [<strong>世界电话区号列表</strong>](#世界电话区号列表)
+     * [十二、音乐相关接口](#十二音乐相关接口)
+          * [<strong>获取每日音乐推荐列表</strong>](#获取每日音乐推荐列表)
+          * [<strong>获取榜单列表</strong>](#获取榜单列表)
+          * [<strong>获取指定榜单的歌曲列表</strong>](#获取指定榜单的歌曲列表)
+          * [<strong>搜索歌曲</strong>](#搜索歌曲)
+          * [<strong>获取歌曲详情</strong>](#获取歌曲详情)
+          * [<strong>搜索歌手</strong>](#搜索歌手)
+          * [<strong>获取歌手详情</strong>](#获取歌手详情)
+          * [<strong>获取歌手所有的歌曲列表</strong>](#获取歌手所有的歌曲列表)
+
+     + [十三、手机号码归属地](#十三手机号码归属地)
+       - [<strong>手机号码归属地查询</strong>](#手机号码归属地查询)
+     + [十四、在线自定义参数](#十四、在线自定义参数)
+       + [创建一个应用](#创建一个应用)
+       + [获取用户创建的应用列表](#获取用户创建的应用列表)
+       + [给指定应用设置在线参数](#给指定应用设置在线参数)
+       + [获取指定应用的在线参数](#获取指定应用的在线参数)
 
 ----
 
@@ -85,6 +110,26 @@
 ----
 
 ## 更新记录
+
+**2019年07月02日 19:30:22**
+
++ 新增获取服务器时间的接口，[查看说明](#获取服务器时间)
++ 新增在线自定义参数的接口，[查看说明](#十四、在线自定义参数)
+
+**2019年06月05日15:54:50**
+
++ 新增查询手机归属地的接口，[查看说明](#十三手机号码归属地)
++ IP地址查询的接口逻辑优化，数据搜索更加准确，[查看说明](#四ip地址信息)
++ 音乐搜索新增page参数，可实现数据分页查询，[查看说明](#搜索歌曲)
+
+**2019年05月22日13:07:41**
+
++ 新增音乐相关接口，拥有这些接口，基本上可以实现一个小的音乐播放器，[查看说明](#十二音乐相关接口)
+
+**2019年05月15日11:57:20**
+
++ 新增国家电话区号列表接口，[查看说明](#十一世界电话区号列表)
++ 国家城市列表接口新增世界级国家城市列表查询，[查看说明](#世界级国家城市列表)
 
 **2019年04月11日23:59:55** 
 
@@ -751,7 +796,7 @@
   }
   ```
 
-### 三、全国城市列表（全国地级市API，数据来源国家统计局）
+### 三、全国城市列表（全国地级市API，数据来源国家统计局），世界城市列表
 
 #### **全国城市列表**
 
@@ -866,6 +911,86 @@
       ]
   }
   ```
+
+#### **世界级国家城市列表**
+
+- **接口说明：** 获取世界级国家城市列表（2019年05月15日新增接口）
+
+- **接口地址：** [HOST]/address/v2/list 
+
+- **参数说明：** 无参
+
+- **返回数据：** 
+
+  - **code：** 省/市/区编号
+  - **name：** 省/市/区名称
+  - **clist：** 省/市列表
+  - **pchilds：** 市列表
+  - **cchilds：** 区列表
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "name": "中国",
+              "code": "1",
+              "clist": [
+                  {
+                      "code": "110000",
+                      "name": "北京市",
+                      "pchilds": [
+                          {
+                              "code": "110100",
+                              "name": "市辖区",
+                              "cchilds": [
+                                  {
+                                      "code": "110101",
+                                      "name": "东城区"
+                                  },
+                                  {
+                                      "code": "110102",
+                                      "name": "西城区"
+                                  },
+                                  ...这里只显示了两个区...
+                              ]
+                          }
+                      ]
+                  }
+                	...这里只显示了一个省/市...
+               ]
+          },
+        	{
+      				"name": "阿尔巴尼亚",
+      				"code": "ALB",
+      				"clist": [
+          				{
+              				"code": "",
+              				"name": "市辖区",
+              				"pchilds": [
+                  				{
+                      				"code": "EL",
+                      				"name": "爱尔巴桑",
+                      				"cchilds": null
+                  				},
+                  				{
+                      				"code": "DI",
+                      				"name": "迪勃拉",
+                      				"cchilds": null
+                  				}
+                   				...这里只显示了一个省/市... 
+                      ]
+                  }
+          		]
+          }
+       ]
+  }
+  ```
+
+  
 
 ### 四、IP地址信息
 
@@ -990,6 +1115,30 @@
           "id": "jlazntmtjrvcrpnb"
       }
   }
+  ```
+
+#### **获取服务器时间**
+
+- **接口说明：** 获取服务器时间
+
+- **接口地址：** [HOST]/tools/system/time
+
+- **参数说明：** 无参
+
+- **返回数据：** 
+
+  - **time：** 服务器当前时间戳
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "time": 1562063265883
+      }
+  } 
   ```
 
 ### 六、天气信息
@@ -1322,4 +1471,536 @@
   }
   ```
 
+### 十一、世界电话区号列表
 
+#### **世界电话区号列表**
+
+- **接口说明：** 获取世界电话区号列表。
+
+- **接口地址：** [HOST]/phone_code/list   
+
+- **参数说明：** 无
+
+- **返回数据：** 
+  - **zhCn：** 中文名称
+  - **enUs：** 英文名称
+  - **phoneCode：** 电话区号
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "zhCn": "中国",
+              "enUs": "China",
+              "phoneCode": "+86"
+          },
+          {
+              "zhCn": "澳门",
+              "enUs": "Macao",
+              "phoneCode": "+853"
+          },
+          {
+              "zhCn": "阿富汗",
+              "enUs": "Afghanistan",
+              "phoneCode": "+93"
+          }
+        	...这里只显示了三条数据...
+      ]
+  }
+  ```
+
+
+### 十二、音乐相关接口
+
+#### **获取每日音乐推荐列表**
+
+- **接口说明：** 获取每日音乐推荐列表。
+- **接口地址：** [HOST]/music/recommend/list   【例如： [HOST]/music/recommend/list】
+- **参数说明：** 无
+- **返回数据：** 
+  - **pic_huge：** 最大的图片地址
+  - **ting_uid：** 歌手id
+  - **si_proxycompany：** 公司信息
+  - **author：** 歌手姓名
+  - **info：** 音乐描述
+  - **album_title：** 专辑名称
+  - **title：** 音乐名称
+  - **language：** 音乐语言
+  - **pic_big：** 歌曲大图
+  - **pic_singer**：歌手图片
+  - **publishtime：** 发布时间
+  - **pic_premium：** 歌曲图片-中
+  - **pic_small：** 歌曲图片-小
+  - **song_id：** 歌曲id，查询歌曲详情需要用到
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "pic_huge": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_1000,h_1000",
+              "ting_uid": "1108",
+              "si_proxycompany": "滚石国际音乐股份有限公司",
+              "author": "成龙",
+              "info": "电影《黄飞鸿Ⅱ之男儿当自强》主题曲",
+              "album_title": "成龙超级精装大戏主题曲",
+              "title": "男儿当自强",
+              "language": "国语",
+              "pic_big": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_150,h_150",
+              "pic_singer": "",
+              "publishtime": "1995-01-21",
+              "pic_premium": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_500,h_500",
+              "song_id": "228311",
+              "pic_small": "http://qukufile2.qianqian.com/data2/pic/282c925608440af3e1a85b8c1565c88e/70303/70303.jpg@s_2,w_90,h_90"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取榜单列表**
+
+- **接口说明：** 获取每日音乐推荐列表。
+- **接口地址：** [HOST]/music/order/list   【例如： [HOST]/music/order/list】
+- **参数说明：** 无
+- **返回数据：** 
+  - **name：** 榜单名称
+  - **type：** 榜单类型，查询榜单歌曲列表需要用到
+  - **comment：** 榜单描述
+  - **pic_s192：** 榜单图片1
+  - **pic_s444：** 榜单图片2
+  - **pic_s260：** 榜单图片3
+  - **pic_s210：** 榜单图片4
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "name": "热歌榜",
+              "type": 2,
+              "comment": "该榜单是根据音乐平台歌曲每周播放量自动生成的数据榜单，统计范围为音乐平台上的全部歌曲，每日更新一次",
+              "pic_s192": "图片链接",
+              "pic_s444": "图片链接",
+              "pic_s260": "图片链接",
+              "pic_s210": "图片链接"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取指定榜单的歌曲列表**
+
+- **接口说明：** 获取指定榜单类型的歌曲列表。需要传入榜单类型type
+- **接口地址：** [HOST]/music/order/song/list  【例如： [HOST]/music/order/song/list?type=2&page=1】
+- **参数说明：** type：榜单列表中的榜单类型；page：页数(从1开始)
+- **返回数据：** 
+  - **language：** 音乐语言
+  - **publishtime：** 发布时间
+  - **pic_big：** 音乐大图地址
+  - **country：** 音乐所属国家
+  - **lrclink：** 歌词地址
+  - **file_duration：** 音乐时长
+  - **si_proxycompany：** 公司信息
+  - **song_id：** 音乐id，查询音乐详情需要
+  - **title：** 音乐名称
+  - **ting_uid：** 歌手id，查询歌手信息可用
+  - **author：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 1267,
+          "totalPage": 127,
+          "limit": 10,
+          "list": [
+              {
+                  "language": "国语",
+                  "publishtime": "2018-07-26",
+                  "pic_big": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_150,h_150",
+                  "pic_small": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_90,h_90",
+                  "country": "内地",
+                  "lrclink": "http://qukufile2.qianqian.com/data2/lrc/3bfe46c3621abf2bc89f50969a74c9a2/612356232/612356232.lrc",
+                  "file_duration": null,
+                  "si_proxycompany": "星空盛典影业（北京）有限公司",
+                  "song_id": "601427388",
+                  "title": "卡路里（电影《西虹市首富》插曲）",
+                  "ting_uid": "340442495",
+                  "author": "火箭少女101"
+              }
+              ...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
+#### **搜索歌曲**
+
+- **接口说明：** 搜索歌曲
+- **接口地址：** [HOST]/music/song/search  【例如： [HOST]/music/song/search?keyWord=稻香&page=1】
+- **参数说明：** keyWord：被搜索的歌曲关键字，page：页数
+- **返回数据：** 
+  - **id：** 音乐id，查询音乐详情需要
+  - **songName：** 音乐名称
+  - **albumName：** 专辑名称
+  - **artistName：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 18,
+          "totalPage": 1,
+          "limit": 30,
+          "list": [
+              {
+                  "songName": "稻香",
+                  "artistName": "周杰伦",
+                  "albumName": "《魔杰座》",
+                  "id": "1390840"
+              }
+            	...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
+#### **获取歌曲详情**
+
+- **接口说明：** 根据歌曲id获取歌曲详情
+- **接口地址：** [HOST]/music/song/detail  【例如： [HOST]/music/song/detail?songId=114921778】
+- **参数说明：** songId：被搜索的歌曲id
+- **返回数据：** 
+  - **id：** 音乐id，查询音乐详情需要
+  - **songName：** 音乐名称
+  - **albumName：** 专辑名称
+  - **artistName：** 歌手姓名
+  - **songPic：** 歌曲图片
+  - **lrcLink：** 歌词地址
+  - **time：** 歌曲时长/秒
+  - **songLink：** 歌曲下载地址
+  - **format：** 歌曲格式
+  - **rate：** 歌曲rate
+  - **size：** 歌曲文件大小
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "songName": "活出个样给自己看",
+          "artistName": "衡越",
+          "albumName": "圆梦",
+          "songPic": "http://qukufile2.qianqian.com/data2/pic/09F3D02F6BF46E1425A81A0E6744B1B8/252053022/252053022.jpg@s_2,w_300,h_300",
+          "lrcLink": "http://qukufile2.qianqian.com/data2/lrc/f3eb5904d6294625313cd35042c11a4b/601822333/601822333.lrc",
+          "time": 131,
+          "songLink": "http://zhangmenshiting.qianqian.com/data2/music/c5d8ff96a500d5bce48b0994ad72f367/601820410/114921778208800128.mp3?xcode=8f0f22538cd02392cc3224dc97e4d7a9",
+          "format": "mp3",
+          "rate": 128,
+          "size": 2102206
+      }
+  }
+  ```
+
+#### **搜索歌手**
+
+- **接口说明：** 搜索歌手信息
+- **接口地址：** [HOST]/music/singer/search 【例如： [HOST]/music/singer/search?keyWord=周杰伦】
+- **参数说明：** keyWord：被搜索的歌手关键字
+- **返回数据：** 
+  - **singerId：** 歌手id，查询歌手详情需要
+  - **singerPic：** 歌手图片
+  - **singerName：** 歌手姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "singerName": "周杰伦",
+              "singerId": "7994",
+              "singerPic": "http://qukufile2.qianqian.com/data2/pic/046d17bfa056e736d873ec4f891e338f/540336142/540336142.jpg@s_2,w_48,h_48"
+          }
+          ...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **获取歌手详情**
+
+- **接口说明：** 通过歌手id获取歌手详情
+- **接口地址：** [HOST]/music/singer/detail 【例如： [HOST]/music/singer/detail?singerId=340442495】
+- **参数说明：** singerId：被搜索的歌手id
+- **返回数据：** 
+  - **singerId：** 歌手id
+  - **stature：** 身高
+  - **avatar：** 头像
+  - **constellation：** 星座
+  - **intro：** 介绍
+  - **company：** 公司
+  - **country：** 国际
+  - **birth：** 生日
+  - **name：** 姓名
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "stature": "",
+          "avatar": "http://qukufile2.qianqian.com/data2/pic/6f1e938177547e7c337cc50463f8f2ce/610195446/610195446.jpg@s_2,w_500,h_500",
+          "constellation": "巨蟹",
+          "intro": "火箭少女101是由哇唧唧哇娱乐于2018年推出的中国内地女子演唱组合，由孟美岐、吴宣仪、杨超越、段奥娟、Yamy、赖美云、张紫宁、杨芸晴、李紫婷、傅菁、徐梦洁十一位成员组成 。\n\n2018年6月23日，11位成员在腾讯视频女团青春成长节目《创造101》中获胜，成功获得成团资格；同日，发行单曲《Rocket Girls》；24日，通过湖南卫视《快乐中国毕业歌会》完成成团首秀；7月12日，首部团体综艺节目《火箭少女101研究所》首播；27日，为电影《西虹市首富》演唱插曲《卡路里》。",
+          "company": "",
+          "country": "中国",
+          "artist_id": "601427383",
+          "birth": "2018-06-23",
+          "name": "火箭少女101",
+          "singerId": "340442495"
+      }
+  }
+  ```
+
+#### **获取歌手所有的歌曲列表**
+
+- **接口说明：** 通过歌手id获取歌手所有的单曲列表
+- **接口地址：** [HOST]/music/singer/song/list 【例如： [HOST]/music/singer/song/list?singerId=340442495&page=1】
+- **参数说明：** singerId：被查询的歌手id ；page：页数(从1开始)
+- **返回数据：** 
+  - **language：** 音乐语言
+  - **publishtime：** 发布时间
+  - **pic_big：** 音乐大图地址
+  - **country：** 音乐所属国家
+  - **lrclink：** 歌词地址
+  - **file_duration：** 音乐时长
+  - **si_proxycompany：** 公司信息
+  - **song_id：** 音乐id，查询音乐详情需要
+  - **title：** 音乐名称
+  - **ting_uid：** 歌手id，查询歌手信息可用
+  - **author：** 歌手姓名
+
+- **数据样例：** 
+
+- ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "page": 1,
+          "totalCount": 4,
+          "totalPage": 1,
+          "limit": 10,
+          "list": [
+              {
+                  "language": "国语",
+                  "publishtime": "2018-07-26",
+                  "pic_big": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_150,h_150",
+                  "pic_small": "http://qukufile2.qianqian.com/data2/pic/8d356491f24692ff802cc49c80f51fee/612356223/612356223.jpg@s_2,w_90,h_90",
+                  "country": "内地",
+                  "lrclink": "http://qukufile2.qianqian.com/data2/lrc/3bfe46c3621abf2bc89f50969a74c9a2/612356232/612356232.lrc",
+                  "file_duration": "232",
+                  "si_proxycompany": "星空盛典影业（北京）有限公司",
+                  "song_id": "601427388",
+                  "title": "卡路里（电影《西虹市首富》插曲）",
+                  "ting_uid": "340442495",
+                  "author": "火箭少女101"
+              }
+              ...这里只显示了一条数据...
+          ]
+      }
+  }
+  ```
+
+
+### 十三、手机号码归属地
+
+#### **手机号码归属地查询**
+
+- **接口说明：** 手机号码归属地查询。
+
+- **接口地址：** [HOST]/mobile_location/aim_mobile 【例如： [HOST]/mobile_location/aim_mobile?mobile=13227293721（这不是我手机号，不要加我微信撩我）】
+
+- **参数说明：** mobile：目标手机号码
+
+- **返回数据：** 
+
+  - **mobile：** 目标手机号
+  - **province：** 归属地省份
+  - **carrier：** 归属地描述
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "mobile": "13227293721",
+          "province": "湖北",
+          "carrier": "湖北联通"
+      }
+  }
+  ```
+
+###十四、在线自定义参数
+
+#### **说明**：
+
++ 使用场景：比如App正在应用市场进行审核的时候，需要隐藏一些敏感的页面，一个敏感的功能，防止审核员看到后会让应用审核不通过，这个时候就需要一个在线自定义的参数，来告诉App当前是否是审核的敏感期，来做对应的处理。
++ 使用流程：为了完成上面的功能，开发者需要完成以下几步，如果你不使用这个功能，可不关注如下步骤。
+  + 1、联系管理员注册一个账户，因为你创建的应用需要跟账户绑定，才不会出现丢失的情况。
+  + 2、创建账户成功之后，会提供一个user_id给你，这个相当于一个账户的凭证。用这个user_id调用[创建一个应用](#创建一个应用)接口创建一个应用，创建应用之后就可以拿到应用的productId和secret。
+  + 3、有了productId和secret就可以调用[给指定应用设置在线参数](#给指定应用设置在线参数)设置在线参数了
+  + 4、设置成功之后在客户端就可以调用接口[获取指定应用的在线参数](#获取指定应用的在线参数)来说去已设置的在线参数了。
+
+#### **创建一个应用**
+
+- **接口说明：** 用户创建一个应用来启用在线自定义参数的功能。
+
+- **接口地址：** [HOST]/admin/user/product/add 【例如： [HOST]/admin/user/product/add?type=1&name=测试app&desc=测试描述&user_id=您的user_id】
+
+- **参数说明：** type：应用类型，0-移动应用 1-网页应用；name：应用名称（不可为空）；desc：应用描述；user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）
+
+- **返回数据：** 
+
+  - **productId：** 应用id
+  - **secret：** 应用secret
+  - **createTime：** 创建时间
+  - **description：** 应用描述
+  - **productName：** 应用名称
+  - **productType：** 应用类型
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "productId": "50004",
+          "secret": "924d88c474994a8b88f7f62d9bc634b6",
+          "createTime": "2019-07-02 18:47:06",
+          "description": "测试描述",
+          "productName": "测试3app",
+          "productType": "网页应用"
+      }
+  }
+  ```
+
+### **获取用户创建的应用列表**
+
+- **接口说明：** 获取用户创建的所有应用列表。
+
+- **接口地址：** [HOST]/admin/user/product/list 【例如： [HOST]/admin/user/product/add?user_id=您的user_id】
+
+- **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）
+
+- **返回数据：** 
+
+  - **productId：** 应用id
+  - **secret：** 应用secret
+  - **createTime：** 创建时间
+  - **description：** 应用描述
+  - **productName：** 应用名称
+  - **productType：** 应用类型
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "productId": "50000",
+              "secret": "7f4470ffaaf84613928ccb73d9491950",
+              "createTime": "2019-07-02 14:49:40",
+              "description": "测试描述",
+              "productName": "测试app",
+              "productType": "移动应用"
+          },
+        	...这里只显示了一条数据...
+      ]
+  }
+  ```
+
+#### **给指定应用设置在线参数**
+
+- **接口说明：** 给指定应用设置在线参数。
+
+- **请求方法：** POST
+
+- **接口地址：** [HOST]/remote_config/set 【例如： [HOST]/remote_config/set?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id&config=eyJpc1Nob3ciOnRydWV9】
+
+- **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）；secret：应用的secret，可从应用列表获取；product_id：应用的product_id，可从应用列表获取；config：在线参数的值，这里建议传递json串，特别注意，这个参数需要base64加密之后传给后端，否则会出错。
+
+- **返回数据：** 
+
+  无
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 0,
+      "msg": "配置设置成功",
+      "data": null
+  }
+  ```
+
+#### **获取指定应用的在线参数**
+
+- **接口说明：** 获取指定应用的在线参数。
+
+- **接口地址：** [HOST]/remote_config/get 【例如： [HOST]/remote_config/get?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id】
+
+- **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）；secret：应用的secret，可从应用列表获取；product_id：应用的product_id，可从应用列表获取；
+
+- **返回数据：** 
+
+  - **productId：** 应用id
+  - **updateTime：** 配置修改时间
+  - **productConfig：** 应用在线参数配置信息，这里返回的数据不需要进行base64解码即可使用，如果你之前设置的是json数据，这里返回的也是json数据，你需要对productConfig的数据进行二次json解析。
+
+- **数据样例：** 
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "productId": 50000,
+          "productConfig": "{\"isShow\":true}",
+          "updateTime": 1562054944000
+      }
+  }
+  ```
+
+  

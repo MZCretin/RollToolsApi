@@ -1979,7 +1979,7 @@
 
 - **请求方法：** POST
 
-- **接口地址：** [HOST]/remote_config/set 【例如： [HOST]/remote_config/set?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id&config=eyJpc1Nob3ciOnRydWV9】
+- **接口地址：** [HOST]/remote_config/set 【例如： [HOST]/remote_config/set?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id&config=eyJpc1Nob3ciOnRydWV9，注意：后面的参数写在这里只是方便查看，真的传参要放在POST请求的参数列表里面】
 
 - **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）；secret：应用的secret，可从应用列表获取；product_id：应用的product_id，可从应用列表获取；config：在线参数的值，这里建议传递json串，特别注意，这个参数需要base64加密之后传给后端，否则会出错。
 

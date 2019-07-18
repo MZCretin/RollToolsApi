@@ -16,7 +16,9 @@
 
 **随着群一的人数越来越多，带来一定的不便之处，所以新增第二个交流群，可直接扫描二维码添加群（图二），如果群二维码失效或者其他原因无法进群的，可添加我好友，我手动拉你入群！**
 
-<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="200" height="300" src="./png/api.jpg"/></div>
+**自助IP解封：对于使用中逻辑不正确导致的IP封禁，现提供自助解封方式，微信公众号搜索《Cretin的开发之路》，回复任意消息可召唤出自助服务系统，按照说明进行IP自助解封！如图三**
+
+<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="231" height="300" src="./png/api.jpg"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
 
 ------
 

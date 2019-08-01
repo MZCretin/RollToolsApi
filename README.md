@@ -95,6 +95,11 @@
   - [十七、福利养眼图片](#十七福利养眼图片)
     + [<strong>随机获取福利图片</strong>](#随机获取福利图片)
     + [<strong>获取福利图片列表</strong>](#获取福利图片列表)
+  - [十八、物流查询](#十八物流查询)
+    - [<strong>查询支持的所有快递公司编号列表</strong>](#查询支持的所有快递公司编号列表)
+    - [<strong>根据公司名称查询对应的公司编号</strong>](#根据公司名称查询对应的公司编号)
+    - [<strong>根据快递单号识别出所属快递公司编号</strong>](#根据快递单号识别出所属快递公司编号)
+    - [<strong>查询物流信息</strong>](#查询物流信息)
 
 ------
 
@@ -134,6 +139,12 @@
 ------
 
 ## 更新记录
+
+**2019-07-24 23:54:27**
+
++ 新增物流查询的接口，[查看说明](#十八物流查询)
++ 段子接口当请求页数超过最大页数时返回空数组
++ 修复一些已知的bug
 
 **2019-07-10 20:22:17**
 
@@ -2284,6 +2295,155 @@
                   "imageFileLength": 605716
               },
               ...这里只显示一条...
+          ]
+      }
+  }
+  ```
+
+
+### **十八、物流查询**
+
+#### **查询支持的所有快递公司编号列表**
+
+- **接口说明：** 查询支持的所有快递公司编号列表。
+
+- **接口地址：** [HOST]/logistics/type/list 【例如： [HOST]/logistics/type/list】
+
+- **参数说明：** 无
+
+- **返回数据：** 
+
+  - **logisticsId：** 快递公司编号id，后面查询物流信息需要用到
+  - **logisticsName：**  快递公司名称
+  - **hot：** 是否是热门快递公司
+
+- **数据样例：**
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "logisticsId": 1,
+              "logisticsName": "顺丰速运",
+              "hot": true
+          },
+          {
+              "logisticsId": 2,
+              "logisticsName": "百世快递",
+              "hot": true
+          },
+          ...这里只展示了两个...
+      ]
+  }
+  ```
+
+#### **根据公司名称查询对应的公司编号**
+
+- **接口说明：** 根据公司名称查询对应的公司编号。
+
+- **接口地址：** [HOST]/logistics/type/search 【例如： [HOST]/logistics/type/search?name=韵达】
+
+- **参数说明：** name：被查询的公司名称
+
+- **返回数据：** 
+
+  - **logisticsId：** 快递公司编号id，后面查询物流信息需要用到
+  - **logisticsName：**  快递公司名称
+  - **hot：** 是否是热门快递公司
+
+- **数据样例：**
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": [
+          {
+              "logisticsId": 6,
+              "logisticsName": "韵达速递",
+              "hot": true
+          },
+          {
+              "logisticsId": 178,
+              "logisticsName": "韵达快运",
+              "hot": false
+          }
+      ]
+  }
+  ```
+
+#### **根据快递单号识别出所属快递公司编号**
+
+- **接口说明：** 根据快递单号识别出所属快递公司编号。
+
+- **接口地址：** [HOST]/logistics/discern 【例如： [HOST]/logistics/discern?logistics_no=804967979558203287】
+
+- **参数说明：** logistics_no：被查询的快递单号
+
+- **返回数据：** 
+
+  - **logisticNo：** 快递单号
+  - **searchList：**  搜索结果，搜索不到时列表为空
+    - **logisticsTypeName：** 单号对应的物流公司名称
+    - **logisticsTypeId：**  单号对应的物流公司id，后面查询物流信息需要用到
+
+- **数据样例：**
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "logisticNo": "804967979558203287",
+          "searchList": [
+              {
+                  "logisticsTypeName": "圆通速递",
+                  "logisticsTypeId": 5
+              }
+          ]
+      }
+  }
+  ```
+
+#### **查询物流信息**
+
+- **接口说明：** 根据快递单号以及物流公司id查询物流信息。
+
+- **接口地址：** [HOST]/logistics/details/search 【例如： [HOST]/logistics/details/search?logistics_no=804967979558203287&logistics_id=5】
+
+- **参数说明：** logistics_no：被查询的快递单号，logistics_id：单号对应的物流id
+
+- **返回数据：** 
+
+  - **logisticNo：** 快递单号
+  - **logisticsType：**  物流公司类型名称
+  - **status：** 物流当前状态，分别为”在途中“，”签收“，”问题件“
+  - **data：** 物流轨迹
+    - **time：** 时间锚点
+    - **desc：** 
+
+- **数据样例：**
+
+  ```java
+  {
+      "code": 1,
+      "msg": "数据返回成功",
+      "data": {
+          "logisticsNo": "804967979558203287",
+          "logisticsType": "圆通速递",
+          "status": "签收",
+          "data": [
+              {
+                  "time": "2019-03-21 15:42:28",
+                  "desc": "【河南省商丘市柘城公司】 已收件"
+              },
+              {
+                  "time": "2019-03-21 15:42:39",
+                  "desc": "【河南省商丘市柘城】 已发出 下一站 【郑州转运中心】"
+              },
+             ...这里只展示两条轨迹信息...
           ]
       }
   }

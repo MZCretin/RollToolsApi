@@ -479,7 +479,7 @@
 
 - **接口说明：** 获取系统支持的彩种类型详细信息
 
-- **接口地址：** [HOST]/lottery/common/history【例如： [HOST]/lottery/common/history?code=ssq&size=10】
+- **接口地址：** [HOST]/lottery/common/types【例如： [HOST]/lottery/common/types】
 
 - **参数说明：** 无
 

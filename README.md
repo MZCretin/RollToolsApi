@@ -6,6 +6,19 @@
 
 **主页地址：目前接口已经支持https请求，推荐使用 https://www.mxnzp.com ，更安全，http://www.mxnzp.com 可继续使用，域名已经成功备案**
 
+## 解锁新方式
+
++ **各位开发者，为了更方便的使用，经过一段时间的努力，开通了app_id和app_secret方式请求接口的方式，使用此方式最大的好处在于不会再有使用上的限制，包括你可以在你的服务器中调用，包括不会限制你的调用频率，包括不会封IP！**
+
++ **如何注册app_id和app_secret呢？扫描下方小程序码，进入我的页面，绑定手机号之后即可获取你的专属app_id和app_secret，使用新方式吧骚年！**
++ **如何使用呢？**
+  + 在每个请求链接后面添加app_id=你的app_id&app_secret=你的app_secret两个参数，如果是POST请求，需要将两个参数放在参数列表中请求
+  + 【推荐方案】在请求头header中添加app_id=你的app_id&app_secret=你的app_secre两个参数，更加方便
+
+<div style="background:#e3e3e3; color:#FFF" align=center ><img width="400" height="400" src="./png/xcx.jpg"/></div>
+
+
+
 ## 特别声明
 
 **各位开发者，请不要在自建服务器中调用本站接口并转发数据，一经发现，将永久封停！请尊重别人的劳动成果！**
@@ -106,6 +119,12 @@
 ## 通用
 
 - **HOST地址：** **推荐使用https接口更安全：https://www.mxnzp.com/api** 之前的 **http://www.mxnzp.com/api** 可继续使用不受影响！
+
+- **app_id和app_secret方式请求（摆脱被封IP的限制，可在服务器中调用接口）：** 
+
+  - 在参数中添加app_id=你的app_id&app_secret=你的app_secret
+  - 【推荐方案】在请求头header中添加app_id=你的app_id&app_secret=你的app_secret
+  - 唯一获取app_id和app_secret方式，扫描上方小程序码进行操作！
 
 - **说明：** 所有的接口都会返回如下格式的数据，具体数据包装在data中，需要根据状态来确定请求是否成功。
 
@@ -246,7 +265,6 @@
 由于服务器端的维护以及部分接口的维护都是需要付费的，所以如果此项目对您有帮助，还希望您捐赠支持，让我能好好的一直坚持下去。金额不在于多少，一份心意就好！
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="220" height="300" src="./png/wechat_small.jpeg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="300" src="./png/alipay_small.jpeg"/></div>
-
 ------
 
 ## 接口列表

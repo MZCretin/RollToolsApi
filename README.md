@@ -39,6 +39,7 @@
 - [通用](#通用)
 - [更新记录](#更新记录)
 - [捐赠](#捐赠)
+- [版权声明](#版权声明)
 - [接口列表](#接口列表)
   - [一、通用彩票信息接口](#一通用彩票信息接口)
     - [<strong>指定期号通用中奖号码</strong>](#指定期号通用中奖号码)
@@ -270,7 +271,9 @@
 由于服务器端的维护以及部分接口的维护都是需要付费的，所以如果此项目对您有帮助，还希望您捐赠支持，让我能好好的一直坚持下去。金额不在于多少，一份心意就好！
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="220" height="300" src="./png/wechat_small.jpeg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="300" src="./png/alipay_small.jpeg"/></div>
-------
+
+
+---------
 
 ## 版权声明
 

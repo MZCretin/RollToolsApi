@@ -17,7 +17,6 @@
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="400" height="400" src="./png/xcx.jpg"/></div>
 
-
 ## 特别声明
 
 **各位开发者，请不要在自建服务器中调用本站接口并转发数据，一经发现，将永久封停！请尊重别人的劳动成果！**
@@ -30,8 +29,7 @@
 
 **自助IP解封：对于使用中逻辑不正确导致的IP封禁，现提供自助解封方式，微信公众号搜索《Cretin的开发之路》，回复任意消息可召唤出自助服务系统，按照说明进行IP自助解封！如图三**
 
-<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="165" height="300" src="https://www.mxnzp.com/api/cretin/admin/get/wx_pic"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
-
+<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="165" height="300" src="https://www.mxnzp.com/api/cretin/admin/get/wx_pic?time=1576121628847"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
 ------
 
 ## 目录
@@ -271,7 +269,6 @@
 由于服务器端的维护以及部分接口的维护都是需要付费的，所以如果此项目对您有帮助，还希望您捐赠支持，让我能好好的一直坚持下去。金额不在于多少，一份心意就好！
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="220" height="300" src="./png/wechat_small.jpeg"/>&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="300" src="./png/alipay_small.jpeg"/></div>
-
 
 ---------
 

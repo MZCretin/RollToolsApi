@@ -28,7 +28,8 @@
 
 **自助IP解封：对于使用中逻辑不正确导致的IP封禁，现提供自助解封方式，微信公众号搜索《Cretin的开发之路》，回复任意消息可召唤出自助服务系统，按照说明进行IP自助解封！如图三**
 
-<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="165" height="300" src="https://www.mxnzp.com/api/cretin/admin/get/wx_pic?time=1576200108550"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
+<div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="165" height="300" src="https://www.mxnzp.com/api/cretin/admin/get/wx_pic?time=1576200108555"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
+
 ------
 
 ## 目录
@@ -111,6 +112,8 @@
     - [<strong>查询物流信息</strong>](#查询物流信息)
   - [十九、历史上的今天](#十九历史上的今天)
     - [<strong>获取历史上的今天数据</strong>](#获取历史上的今天数据)
+  - [二十、简繁转换](#二十简繁转换)
+    - [<strong>简体与繁体的转换</strong>](#简体与繁体的转换)
 
 ------
 
@@ -156,6 +159,10 @@
 ------
 
 ## 更新记录
+
+**2020-01-13 23:28:37**
+
++ 新增简繁转换的接口，[简体与繁体的转换](#简体与繁体的转换)
 
 **2019-11-20 10:12:34**
 
@@ -2679,3 +2686,34 @@
   ```
 
   
+
+### **二十、简繁转换**
+
+#### **简体与繁体的转换**
+
+- **接口说明：** 简体与繁体的相互转换。
+
+- **接口地址：** [HOST]/convert/zh 【例如： [HOST]/convert/zh?content=当你老了&type=1】
+
+- **参数说明：** type：1 简体转繁体  2 繁体转简体
+
+- **返回数据：** 
+
+  - **originContent：** 原内容
+  - **convertContent：**  转化转化的内容
+
+- **数据样例：**
+
+  ```java
+  {
+      code: 1,
+      msg: "数据返回成功！",
+      data: {
+          originContent: "当你老了",
+          convertContent: "當你老了"
+      }
+  }
+  ```
+
+  
+

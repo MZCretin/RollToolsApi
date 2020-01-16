@@ -114,6 +114,8 @@
     - [<strong>获取历史上的今天数据</strong>](#获取历史上的今天数据)
   - [二十、简繁转换](#二十简繁转换)
     - [<strong>简体与繁体的转换</strong>](#简体与繁体的转换)
+  - [二十一、文本翻译](#二十文本翻译)
+    - [<strong>文本翻译</strong>](#文本翻译)
 
 ------
 
@@ -160,7 +162,11 @@
 
 ## 更新记录
 
-**2020-01-13 23:28:37**
+**2020-01-16 22:16:09**
+
++ 新增翻译接口，[文本翻译](#文本翻译)
+
+**2020-01-13 23:28:37** 
 
 + 新增简繁转换的接口，[简体与繁体的转换](#简体与繁体的转换)
 
@@ -2695,7 +2701,10 @@
 
 - **接口地址：** [HOST]/convert/zh 【例如： [HOST]/convert/zh?content=当你老了&type=1】
 
-- **参数说明：** type：1 简体转繁体  2 繁体转简体
+- **参数说明：** 
+
+  - type：1 简体转繁体  2 繁体转简体
+  - content：待转换的内容
 
 - **返回数据：** 
 
@@ -2706,14 +2715,55 @@
 
   ```java
   {
-      code: 1,
-      msg: "数据返回成功！",
-      data: {
-          originContent: "当你老了",
-          convertContent: "當你老了"
+      "code": 1,
+      "msg": "数据返回成功！现已提供app_id方式请求接口，不限速，不限流，不封IP，可在自建服务器调用api，欢迎升级使用！非app_id请求的方式将于不久后关闭，请提前替换成app_id请求的方式，详情请访问：https://github.com/MZCretin/RollToolsApi#%E8%A7%A3%E9%94%81%E6%96%B0%E6%96%B9%E5%BC%8F",
+      "data": {
+          "originContent": "当你老了",
+          "convertContent": "當你老了"
       }
   }
   ```
 
-  
+
+
+
+### **二十一、文本翻译**
+
+#### **文本翻译**
+
+- **接口说明：** 将一种语种翻译成另外一种语种。
+
+- **接口地址：** [HOST]/convert/translate 【例如： [HOST]/convert/translate?content=我是一个好人&from=zh&to=en】
+
+- **参数说明：** 
+
+  - **content：** 被翻译的内容
+
+  + **from：** 原文语种，可选值如下
+    + auto ：自动检测语言，但对于非常用语种，语种自动检测可能存在误差
+    + zh-中文，en-英文，yue-粤语，wyw-文言文，jp-日语，kor-韩语，fra-法语，spa-西班牙语，th-泰语，ara-阿拉伯语，ru-俄语，pt-葡萄牙语，de-德语，it-意大利语，el-希腊语，nl-荷兰语，pl-波兰语，bul-保加利亚语，est-爱沙尼亚语，dan-丹麦语，fin-芬兰语，cs-捷克语，rom-罗马尼亚语，slo-斯洛文尼亚语，swe-瑞典语，hu-匈牙利语，cht-繁体中文，vie-越南语
+  + **to：** 被翻译的目标语种，可选值如下
+    + zh-中文，en-英文，yue-粤语，wyw-文言文，jp-日语，kor-韩语，fra-法语，spa-西班牙语，th-泰语，ara-阿拉伯语，ru-俄语，pt-葡萄牙语，de-德语，it-意大利语，el-希腊语，nl-荷兰语，pl-波兰语，bul-保加利亚语，est-爱沙尼亚语，dan-丹麦语，fin-芬兰语，cs-捷克语，rom-罗马尼亚语，slo-斯洛文尼亚语，swe-瑞典语，hu-匈牙利语，cht-繁体中文，vie-越南语
+
+- **返回数据：** 
+
+  - **origin：** 原内容
+  - **result：**  被翻译后的内容
+  - **originLanguage：** 原文语种编码
+  - **resultLanguage：** 被翻译后的语种编码
+
+- **数据样例：**
+
+```java
+{
+    "code": 1,
+    "msg": "数据返回成功！",
+    "data": {
+        "origin": "我是一个好人",
+        "result": "I'm a good man",
+        "originLanguage": "zh",
+        "resultLanguage": "en"
+    }
+}
+```
 

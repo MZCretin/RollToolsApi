@@ -2718,7 +2718,7 @@
   ```java
   {
       "code": 1,
-      "msg": "数据返回成功！现已提供app_id方式请求接口，不限速，不限流，不封IP，可在自建服务器调用api，欢迎升级使用！非app_id请求的方式将于不久后关闭，请提前替换成app_id请求的方式，详情请访问：https://github.com/MZCretin/RollToolsApi#%E8%A7%A3%E9%94%81%E6%96%B0%E6%96%B9%E5%BC%8F",
+      "msg": "数据返回成功！",
       "data": {
           "originContent": "当你老了",
           "convertContent": "當你老了"

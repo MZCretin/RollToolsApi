@@ -8,6 +8,8 @@
 
 ## 解锁新方式
 
++ **郑重说明：为了更加方便你的使用，也更加方便我这边的管理，防止误封IP给你带来不便，不久后将主动拦截非app_id方式的请求。请各位知晓**
+
 + **各位开发者，为了更方便的使用，经过一段时间的努力，开通了app_id和app_secret方式请求接口的方式，使用此方式最大的好处在于不会再有使用上的限制，包括你可以在你的服务器中调用，包括不会限制你的调用频率，包括不会封IP！**
 
 + **如何注册app_id和app_secret呢？扫描下方小程序码（或者搜索小程序【Roll地盘】），进入我的页面，绑定手机号之后即可获取你的专属app_id和app_secret，使用新方式吧骚年！**
@@ -30,6 +32,7 @@
 **自助IP解封：对于使用中逻辑不正确导致的IP封禁，现提供自助解封方式，微信公众号搜索《Cretin的开发之路》，回复任意消息可召唤出自助服务系统，按照说明进行IP自助解封！如图三**
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="200" height="300" src="./png/me.jpeg"/><img width="165" height="300" src="https://www.mxnzp.com/api/cretin/admin/get/wx_pic?time=1576200108566"/> <img width="150" height="300" src="./png/gongzhonghao.jpg"/></div>
+
 ------
 
 ## 目录

@@ -178,6 +178,11 @@
 
 ## 更新记录
 
+**2020-06-08 16:36:29**
+
++ 节假日及万年历相关接口新增 **indexWorkDayOfMonth** 字段，此字段返回是当前月的第几个工作日，[二、节假日及万年历](#二节假日及万年历)
++ 天气接口新增天气描述，风力描述，风向描述清单，[附件](#附件)
+
 **2020-02-26 21:47:39**
 
 + 新增每日推荐精美语句接口，[二十三、每日精美语句](#二十三每日精美语句)
@@ -557,6 +562,7 @@
   - **dayOfYear：** 这一年的第几天
   - **weekOfYear：** 这一年的第几周
   - **constellation：** 星座
+  - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - **数据样例：** 
 
@@ -577,7 +583,8 @@
           "suit": "破屋.坏垣.祭祀.余事勿取",
           "dayOfYear": 325,
           "weekOfYear": 47,
-          "constellation": "天蝎座"
+          "constellation": "天蝎座",
+          "indexWorkDayOfMonth": 1
       }
   }
   ```
@@ -604,6 +611,7 @@
   - **dayOfYear：** 这一年的第几天
   - **weekOfYear：** 这一年的第几周
   - **constellation：** 星座
+  - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - **数据样例：** 
 
@@ -625,7 +633,8 @@
               "suit": "祭祀.塑绘.开光.裁衣.冠笄.嫁娶.纳采.拆卸.修造.动土.竖柱.上梁.安床.移徙.入宅.安香.结网.捕捉.畋猎.伐木.进人口.放水",
               "dayOfYear": 1,
               "weekOfYear": 1,
-              "constellation": "天蝎座"
+              "constellation": "天蝎座",
+              "indexWorkDayOfMonth": 1
           },
           {
               "date": "2018-10-10",
@@ -640,7 +649,8 @@
               "suit": "祭祀.开光.出行.解除.伐木.作梁.出火.拆卸.入宅.移徙.安床.修造.造畜椆栖.扫舍",
               "dayOfYear": 283,
               "weekOfYear": 41,
-              "constellation": "天蝎座"
+              "constellation": "天蝎座",
+              "indexWorkDayOfMonth": 1
           },
           {
               "date": "2018-10-11",
@@ -655,7 +665,8 @@
               "suit": "纳采.订盟.开市.交易.立券.会亲友.纳畜.牧养.问名.移徙.解除.作厕.入学.起基.安床.开仓.出货财.安葬.启攒.入殓.除服.成服",
               "dayOfYear": 284,
               "weekOfYear": 41,
-              "constellation": "天蝎座"
+              "constellation": "天蝎座",
+              "indexWorkDayOfMonth": 1
           }
       ]
   }
@@ -683,6 +694,7 @@
   - **dayOfYear：** 这一年的第几天
   - **weekOfYear：** 这一年的第几周
   - **constellation：** 星座
+  - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - **数据样例：** 
 
@@ -705,7 +717,8 @@
               "suit": "祭祀.沐浴.祈福.斋醮.订盟.纳采.裁衣.拆卸.起基.竖柱.上梁.安床.入殓.除服.成服.移柩.启攒.挂匾.求嗣.出行.合帐.造畜椆栖",
               "dayOfYear": 32,
               "weekOfYear": 5,
-              "constellation": "天蝎座"
+              "constellation": "天蝎座",
+              "indexWorkDayOfMonth": 1
           },
           ...中间隐藏了"2018-02-02"~"2018-02-27"的数据
           {
@@ -721,7 +734,8 @@
               "suit": "祭祀.斋醮.裁衣.合帐.冠笄.订盟.纳采.嫁娶.入宅.安香.谢土.入殓.移柩.破土.立碑.安香.会亲友.出行.祈福.求嗣.立碑.上梁.放水",
               "dayOfYear": 59,
               "weekOfYear": 9,
-              "constellation": "天蝎座"
+              "constellation": "天蝎座",
+              "indexWorkDayOfMonth": 1
           }
       ]
   
@@ -752,6 +766,7 @@
     - **dayOfYear：** 这一年的第几天
     - **weekOfYear：** 这一年的第几周
     - **constellation：** 星座
+    - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - 数据样例
 
@@ -777,7 +792,8 @@
                       "suit": "捕捉.畋猎.余事勿取",
                       "dayOfYear": 286,
                       "weekOfYear": 41,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   },
                   ...中间隐藏了一部分的数据...
                   {
@@ -793,7 +809,8 @@
                       "suit": "会亲友.嫁娶.订盟.纳采.纳婿.拆卸.修造.动土.起基.竖柱.上梁.安床.会亲友.纳财",
                       "dayOfYear": 301,
                       "weekOfYear": 43,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   }
               ]
           }
@@ -825,6 +842,7 @@
     - **dayOfYear：** 这一年的第几天
     - **weekOfYear：** 这一年的第几周
     - **constellation：** 星座
+    - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - **数据样例：** 
 
@@ -850,7 +868,8 @@
                       "suit": "祭祀.塑绘.开光.裁衣.冠笄.嫁娶.纳采.拆卸.修造.动土.竖柱.上梁.安床.移徙.入宅.安香.结网.捕捉.畋猎.伐木.进人口.放水",
                       "dayOfYear": 1,
                       "weekOfYear": 1,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   },
                   ...中间隐藏了"2018-01-02"~"2018-01-30"的数据
                   {
@@ -866,7 +885,8 @@
                       "suit": "塑绘.开光.沐浴.冠笄.会亲友.作灶.放水.造畜椆栖",
                       "dayOfYear": 31,
                       "weekOfYear": 5,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   }
               ]
           },
@@ -887,7 +907,8 @@
                       "suit": "祭祀.祈福.订盟.纳采.裁衣.拆卸.修造.动土.起基.安床.移徙.入宅.安香.入殓.移柩.安葬.谢土.赴任.进人口.会亲友",
                       "dayOfYear": 335,
                       "weekOfYear": 48,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   },
                   ...中间隐藏了"2018-12-02"~"2018-12-30"的数据
                   {
@@ -902,7 +923,8 @@
                       "suit": "祭祀.沐浴.安床.纳财.畋猎.捕捉",
                       "dayOfYear": 365,
                       "weekOfYear": 1,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   }
               ]
           }
@@ -934,6 +956,7 @@
     - **dayOfYear：** 这一年的第几天
     - **weekOfYear：** 这一年的第几周
     - **constellation：** 星座
+    - **indexWorkDayOfMonth：** 如果当前是工作日 则返回是当前月的第几个工作日，否则返回0
 
 - 数据样例
 
@@ -959,7 +982,8 @@
                       "suit": "祭祀.斋醮.纳财.捕捉.畋猎",
                       "dayOfYear": 6,
                       "weekOfYear": 1,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   },
                   ...中间还有一些数据没有显示...
                   {
@@ -975,7 +999,8 @@
                       "suit": "纳采.订盟.祭祀.求嗣.出火.塑绘.裁衣.会亲友.入学.拆卸.扫舍.造仓.挂匾.掘井.开池.结网.栽种.纳畜.破土.修坟.立碑.安葬.入殓",
                       "dayOfYear": 28,
                       "weekOfYear": 4,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   }
               ]
           },
@@ -997,7 +1022,8 @@
                       "suit": "祭祀.祈福.订盟.纳采.裁衣.拆卸.修造.动土.起基.安床.移徙.入宅.安香.入殓.移柩.安葬.谢土.赴任.进人口.会亲友",
                       "dayOfYear": 335,
                       "weekOfYear": 48,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   },
                   ...中间还有一些数据没有显示...
                   {
@@ -1013,7 +1039,8 @@
                       "suit": "塑绘.斋醮.出行.拆卸.解除.修造.移徙.造船.入殓.除服.成服.移柩.启攒.修坟.立碑.谢土",
                       "dayOfYear": 364,
                       "weekOfYear": 52,
-                      "constellation": "天蝎座"
+                      "constellation": "天蝎座",
+                      "indexWorkDayOfMonth": 1
                   }
               ]
           }

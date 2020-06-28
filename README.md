@@ -328,7 +328,7 @@
 
 - **接口说明：** 获取指定期号的通用获奖号码信息
 
-- **接口地址：** [HOST]/lottery/common/aim_lottery?expect=18135&code=ssq
+- **接口地址：** [HOST](#通用)/lottery/common/aim_lottery?expect=18135&code=ssq
 
 - **参数说明：** expect：彩票期号必传，code：（彩票种类标识，目前提供七种彩种）
 
@@ -364,7 +364,7 @@
 
 - **接口说明：** 获取最新通用中奖号码信息
 
-- **接口地址：** [HOST]/lottery/common/latest?code=ssq
+- **接口地址：** [HOST](#通用)/lottery/common/latest?code=ssq
 
 - **参数说明：** code：（彩票种类标识，目前提供七种彩种）
 
@@ -400,7 +400,7 @@
 
 - **接口说明：** 获取最近历史开奖数据
 
-- **接口地址：** [HOST/lottery/common/history【例如： [HOST]/lottery/common/history?code=ssq&size=10】
+- **接口地址：** [HOST/lottery/common/history【例如： [HOST](#通用)/lottery/common/history?code=ssq&size=10】
 
 - **参数说明：** size：获取历史数据的条数，最多50条，code：（彩票种类标识，目前提供七种彩种）
 
@@ -443,7 +443,7 @@
 
 - **接口说明：** 获取系统支持的彩种类型详细信息
 
-- **接口地址：** [HOST]/lottery/common/types【例如： [HOST]/lottery/common/types】
+- **接口地址：** [HOST](#通用)/lottery/common/types【例如： [HOST](#通用)/lottery/common/types】
 
 - **参数说明：** 无
 
@@ -478,7 +478,7 @@
 
 - **接口说明：** 获取彩票的中奖结果，根据投注的彩票号码及期数判断是否中奖，暂只支持双色球、大乐透、七乐彩和七星彩；结果根据一定算法进行计算，如有偏差，请以官方为准！
 
-- **接口地址：** [HOST]/lottery/common/check【例如： [HOST]/lottery/common/check?code=cjdlt&expect=19090&lotteryNo=13,19,28,30,33@02,12】
+- **接口地址：** [HOST](#通用)/lottery/common/check【例如： [HOST](#通用)/lottery/common/check?code=cjdlt&expect=19090&lotteryNo=13,19,28,30,33@02,12】
 
 - **参数说明：** expect：彩票期号，lotteryNo：购买的号码，号码之间用英文逗号隔开，红色球和蓝色求之间用@连接，例如：13,19,28,30,33@02,12，code：（彩票种类标识，目前提供七种彩种）
 
@@ -544,7 +544,7 @@
 
 - **接口说明：** 获取指定日期的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday/single/{date}  【例如： [HOST]/holiday/single/20181121】
+- **接口地址：** [HOST](#通用)/holiday/single/{date}  【例如： [HOST](#通用)/holiday/single/20181121】
 
 - **参数说明：** date 日期 格式 yyyyMMdd 
 
@@ -593,7 +593,7 @@
 
 - **接口说明：** 获取指定多个日期的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday/multi/{dates}  【例如： [HOST]/holiday/multi/20180101,20181010,20181011】
+- **接口地址：** [HOST](#通用)/holiday/multi/{dates}  【例如： [HOST](#通用)/holiday/multi/20180101,20181010,20181011】
 
 - **参数说明：** dates 日期组 格式 yyyyMMdd,yyyyMMdd,yyyyMMdd （中间用英文逗号隔开） 
 
@@ -676,7 +676,7 @@
 
 - **接口说明：** 获取指定月份的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday/list/month/{date}  【例如： [HOST]/holiday/list/month/201802】
+- **接口地址：** [HOST](#通用)/holiday/list/month/{date}  【例如： [HOST](#通用)/holiday/list/month/201802】
 
 - **参数说明：** date 查询的月份 格式 yyyyMM （只有年月） 
 
@@ -746,7 +746,7 @@
 
 - **接口说明：** 获取指定月份的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday/list/month/{date}/{type}  【例如： [HOST]/holiday/list/month/201810/rest】
+- **接口地址：** [HOST](#通用)/holiday/list/month/{date}/{type}  【例如： [HOST](#通用)/holiday/list/month/201810/rest】
 
 - **参数说明：** date 查询的月份 格式 yyyyMM （只有年月），type 需要查询的类型{可选值：类型 workday 工作日 holiday 节假日 rest 休息日 festival 节日} 
 
@@ -822,7 +822,7 @@
 
 - **接口说明：** 获取指定年份的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday//list/year/{date}  【例如： [HOST]/holiday/list/year/2018】
+- **接口地址：** [HOST](#通用)/holiday//list/year/{date}  【例如： [HOST](#通用)/holiday/list/year/2018】
 
 - **参数说明：** date 查询的年份 格式 yyyy （只有年份） 
 
@@ -936,7 +936,7 @@
 
 - **接口说明：** 获取指定月份的节假日及万年历信息
 
-- **接口地址：** [HOST]/holiday/list/year/{date}/{type}  【例如： [HOST]/holiday/list/year/2018/rest】
+- **接口地址：** [HOST](#通用)/holiday/list/year/{date}/{type}  【例如： [HOST](#通用)/holiday/list/year/2018/rest】
 
 - **参数说明：** date 查询的月份 格式 yyyy （只有年份），type 需要查询的类型{可选值：类型 workday 工作日 holiday 节假日 rest 休息日 festival 节日} 
 
@@ -1052,7 +1052,7 @@
 
 - **接口说明：** 获取最近前后七个节日信息
 
-- **接口地址：** [HOST]/holiday/recent/list  【例如： [HOST]/holiday/recent/list】
+- **接口地址：** [HOST](#通用)/holiday/recent/list  【例如： [HOST](#通用)/holiday/recent/list】
 
 - **参数说明：** 无
 
@@ -1092,7 +1092,7 @@
 
 - **接口说明：** 获取全国城市列表信息
 
-- **接口地址：** [HOST]/address/list 
+- **接口地址：** [HOST](#通用)/address/list 
 
 - **参数说明：** 无参
 
@@ -1156,7 +1156,7 @@
 
 - **接口说明：** 搜索全国城市列表信息
 
-- **接口地址：** [HOST]/address/search 【例如： [HOST]/address/search?type=1&value=深圳】
+- **接口地址：** [HOST](#通用)/address/search 【例如： [HOST](#通用)/address/search?type=1&value=深圳】
 
 - **参数说明：** 
 
@@ -1206,7 +1206,7 @@
 
 - **接口说明：** 获取世界级国家城市列表（2019年05月15日新增接口）
 
-- **接口地址：** [HOST]/address/v2/list 
+- **接口地址：** [HOST](#通用)/address/v2/list 
 
 - **参数说明：** 无参
 
@@ -1288,7 +1288,7 @@
 
 - **接口说明：** 获取访问者的ip地址信息，先获取您的ip地址，再进行解析
 
-- **接口地址：** [HOST]/ip/self
+- **接口地址：** [HOST](#通用)/ip/self
 
 - **参数说明：** 无参
 
@@ -1324,7 +1324,7 @@
 
 - **接口说明：** 获取指定ip的ip地址信息
 
-- **接口地址：** [HOST]/ip/aim_ip?ip=?  【例如： [HOST]/ip/aim_ip?ip=119.123.72.166】
+- **接口地址：** [HOST](#通用)/ip/aim_ip?ip=?  【例如： [HOST](#通用)/ip/aim_ip?ip=119.123.72.166】
 
 - **参数说明：** ip 被查询的ip地址 需保证是正确的ip地址格式
 
@@ -1362,7 +1362,7 @@
 
 - **接口说明：** 获取不重复长ID信息
 
-- **接口地址：** [HOST]/tools/no_repeat_id/long 
+- **接口地址：** [HOST](#通用)/tools/no_repeat_id/long 
 
 - **参数说明：** 无参
 
@@ -1386,7 +1386,7 @@
 
 - **接口说明：** 获取不重复短ID信息
 
-- **接口地址：** [HOST]/tools/no_repeat_id/short
+- **接口地址：** [HOST](#通用)/tools/no_repeat_id/short
 
 - **参数说明：** 无参
 
@@ -1410,7 +1410,7 @@
 
 - **接口说明：** 获取服务器时间
 
-- **接口地址：** [HOST]/tools/system/time
+- **接口地址：** [HOST](#通用)/tools/system/time
 
 - **参数说明：** 无参
 
@@ -1436,7 +1436,7 @@
 
 - **接口说明：** 获取特定城市今日天气信息
 
-- **接口地址：** [HOST]/weather/current/{城市名}   【例如： [HOST]/weather/current/深圳市】
+- **接口地址：** [HOST](#通用)/weather/current/{城市名}   【例如： [HOST](#通用)/weather/current/深圳市】
 
 - **参数说明：** {城市名}  传入你需要查询的城市，请尽量传入完整值，否则系统会自行匹配，可能会有误差
 
@@ -1474,7 +1474,7 @@
 
 - **接口说明：** 获取特定城市今天及未来天气信息
 
-- **接口地址：** [HOST]/weather/forecast/{城市名}   【例如： [HOST]/weather/forecast/深圳市】
+- **接口地址：** [HOST](#通用)/weather/forecast/{城市名}   【例如： [HOST](#通用)/weather/forecast/深圳市】
 
 - **参数说明：** {城市名}  传入你需要查询的城市，请尽量传入完整值，否则系统会自行匹配，可能会有误差
 
@@ -1532,7 +1532,7 @@
 
 - **接口说明：** 分页获取笑话段子列表
 
-- **接口地址：** [HOST/jokes/list 【例如： [HOST]/jokes/list?page=1】
+- **接口地址：** [HOST/jokes/list 【例如： [HOST](#通用)/jokes/list?page=1】
 
 - **参数说明：** page 分页
 
@@ -1574,7 +1574,7 @@
 
 - **接口说明：** 随机获取笑话段子列表
 
-- **接口地址：** [HOST/jokes/list/random 【例如： [HOST]/jokes/list/random】
+- **接口地址：** [HOST/jokes/list/random 【例如： [HOST](#通用)/jokes/list/random】
 
 - **参数说明：** 无参
 
@@ -1605,7 +1605,7 @@
 
 - **接口说明：** 根据传入的内容生成二维码，可以选择获取二维码下载链接，也可以直接获取图片的Base64字符串自己解析（注：Base64字符串前面默认添加了“data:image/jpg;base64,”，取值的时候请根据需要对这个内容进行处理）。
 
-- **接口地址：** [HOST]/qrcode/create/single   【例如： [HOST]/qrcode/create/single?content=你好&size=500&type=0】
+- **接口地址：** [HOST](#通用)/qrcode/create/single   【例如： [HOST](#通用)/qrcode/create/single?content=你好&size=500&type=0】
 
 - **参数说明：** content：生成二维码的内容  size：生成二维码的大小（不传默认为500）type：你希望返回二维码的类型：（0=下载链接 1=base64字符串）
 
@@ -1637,7 +1637,7 @@
 
 - **请求方法：** POST
 
-- **接口地址：** [HOST]/qrcode/create/logo   【例如： [HOST]/qrcode/create/logo?content=你好&size=600&logo_size=500&type=0&logo_img=logo图片】
+- **接口地址：** [HOST](#通用)/qrcode/create/logo   【例如： [HOST](#通用)/qrcode/create/logo?content=你好&size=600&logo_size=500&type=0&logo_img=logo图片】
 
 - **参数说明：** content：生成二维码的内容  size：生成二维码的大小（不传默认为500）type：你希望返回二维码的类型：（0=下载链接 1=base64字符串） logo_size：logo的大小（不传默认为而二维码大小的1/5）logo_img：嵌入在二维码中的logo图片文件，使用post请求上传至服务器
 
@@ -1669,7 +1669,7 @@
 
 - **接口说明：** 根据内容生成指定的条形码。
 
-- **接口地址：** [HOST]/barcode/create   【例如： [HOST]/barcode/create?content=6902538005141&width=500&height=300&type=0】
+- **接口地址：** [HOST](#通用)/barcode/create   【例如： [HOST](#通用)/barcode/create?content=6902538005141&width=500&height=300&type=0】
 
 - **参数说明：** content：需要生成二维码的商品code值；width：生成的图片宽度，默认500；height：生成图片的高度，默认300；type=0：返回类型，0-生成条形码图片的地址链接 1-生成条形码图片的base64字符串（注：Base64字符串前面默认添加了“data:image/jpg;base64,”，取值的时候请根据需要对这个内容进行处理）
 
@@ -1699,7 +1699,7 @@
 
 - **接口说明：** 根据条形码中对应的商品code获取对应的商品信息。
 
-- **接口地址：** [HOST]/barcode/goods/details   【例如： [HOST]/barcode/goods/details?barcode=6902538005141】
+- **接口地址：** [HOST](#通用)/barcode/goods/details   【例如： [HOST](#通用)/barcode/goods/details?barcode=6902538005141】
 
 - **参数说明：** barcode：扫面条形码后的商品code
 
@@ -1735,7 +1735,7 @@
 
 - **接口说明：** 生成随机长度的图片验证码。
 
-- **接口地址：** [HOST]/verifycode/code   【例如： [HOST]/verifycode/code?len=5&type=0】
+- **接口地址：** [HOST](#通用)/verifycode/code   【例如： [HOST](#通用)/verifycode/code?len=5&type=0】
 
 - **参数说明：** len：生成验证码的长度，不传默认5位，type=0：返回类型，0-生成图片的地址链接 1-生成验证码图片的base64字符串（注：Base64字符串前面默认添加了“data:image/jpg;base64,”，取值的时候请根据需要对这个内容进行处理）
 
@@ -1767,7 +1767,7 @@
 
 - **接口说明：** 获取世界电话区号列表。
 
-- **接口地址：** [HOST]/phone_code/list   
+- **接口地址：** [HOST](#通用)/phone_code/list   
 
 - **参数说明：** 无
 
@@ -1810,7 +1810,7 @@
 
 - **接口说明：** 获取每日音乐推荐列表。
 
-- **接口地址：** [HOST]/music/recommend/list   【例如： [HOST]/music/recommend/list】
+- **接口地址：** [HOST](#通用)/music/recommend/list   【例如： [HOST](#通用)/music/recommend/list】
 
 - **参数说明：** 无
 
@@ -1863,7 +1863,7 @@
 
 - **接口说明：** 获取每日音乐推荐列表。
 
-- **接口地址：** [HOST]/music/order/list   【例如： [HOST]/music/order/list】
+- **接口地址：** [HOST](#通用)/music/order/list   【例如： [HOST](#通用)/music/order/list】
 
 - **参数说明：** 无
 
@@ -1902,7 +1902,7 @@
 
 - **接口说明：** 获取指定榜单类型的歌曲列表。需要传入榜单类型type
 
-- **接口地址：** [HOST]/music/order/song/list  【例如： [HOST]/music/order/song/list?type=2&page=1】
+- **接口地址：** [HOST](#通用)/music/order/song/list  【例如： [HOST](#通用)/music/order/song/list?type=2&page=1】
 
 - **参数说明：** type：榜单列表中的榜单类型；page：页数(从1开始)
 
@@ -1956,7 +1956,7 @@
 
 - **接口说明：** 搜索歌曲
 
-- **接口地址：** [HOST]/music/song/search  【例如： [HOST]/music/song/search?keyWord=稻香&page=1】
+- **接口地址：** [HOST](#通用)/music/song/search  【例如： [HOST](#通用)/music/song/search?keyWord=稻香&page=1】
 
 - **参数说明：** keyWord：被搜索的歌曲关键字，page：页数
 
@@ -1995,7 +1995,7 @@
 
 - **接口说明：** 根据歌曲id获取歌曲详情
 
-- **接口地址：** [HOST]/music/song/detail  【例如： [HOST]/music/song/detail?songId=114921778】
+- **接口地址：** [HOST](#通用)/music/song/detail  【例如： [HOST](#通用)/music/song/detail?songId=114921778】
 
 - **参数说明：** songId：被搜索的歌曲id
 
@@ -2038,7 +2038,7 @@
 
 - **接口说明：** 搜索歌手信息
 
-- **接口地址：** [HOST]/music/singer/search 【例如： [HOST]/music/singer/search?keyWord=周杰伦】
+- **接口地址：** [HOST](#通用)/music/singer/search 【例如： [HOST](#通用)/music/singer/search?keyWord=周杰伦】
 
 - **参数说明：** keyWord：被搜索的歌手关键字
 
@@ -2069,7 +2069,7 @@
 
 - **接口说明：** 通过歌手id获取歌手详情
 
-- **接口地址：** [HOST]/music/singer/detail 【例如： [HOST]/music/singer/detail?singerId=340442495】
+- **接口地址：** [HOST](#通用)/music/singer/detail 【例如： [HOST](#通用)/music/singer/detail?singerId=340442495】
 
 - **参数说明：** singerId：被搜索的歌手id
 
@@ -2110,7 +2110,7 @@
 
 - **接口说明：** 通过歌手id获取歌手所有的单曲列表
 
-- **接口地址：** [HOST]/music/singer/song/list 【例如： [HOST]/music/singer/song/list?singerId=340442495&page=1】
+- **接口地址：** [HOST](#通用)/music/singer/song/list 【例如： [HOST](#通用)/music/singer/song/list?singerId=340442495&page=1】
 
 - **参数说明：** singerId：被查询的歌手id ；page：页数(从1开始)
 
@@ -2166,7 +2166,7 @@
 
 - **接口说明：** 手机号码归属地查询。
 
-- **接口地址：** [HOST]/mobile_location/aim_mobile 【例如： [HOST]/mobile_location/aim_mobile?mobile=13227293721（这不是我手机号，不要加我微信撩我）】
+- **接口地址：** [HOST](#通用)/mobile_location/aim_mobile 【例如： [HOST](#通用)/mobile_location/aim_mobile?mobile=13227293721（这不是我手机号，不要加我微信撩我）】
 
 - **参数说明：** mobile：目标手机号码
 
@@ -2206,7 +2206,7 @@
 
 - **接口说明：** 用户创建一个应用来启用在线自定义参数的功能。
 
-- **接口地址：** [HOST]/admin/user/product/add 【例如： [HOST]/admin/user/product/add?type=1&name=测试app&desc=测试描述&user_id=您的user_id】
+- **接口地址：** [HOST](#通用)/admin/user/product/add 【例如： [HOST](#通用)/admin/user/product/add?type=1&name=测试app&desc=测试描述&user_id=您的user_id】
 
 - **参数说明：** type：应用类型，0-移动应用 1-网页应用；name：应用名称（不可为空）；desc：应用描述；user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）
 
@@ -2240,7 +2240,7 @@
 
 - **接口说明：** 获取用户创建的所有应用列表。
 
-- **接口地址：** [HOST]/admin/user/product/list 【例如： [HOST]/admin/user/product/add?user_id=您的user_id】
+- **接口地址：** [HOST](#通用)/admin/user/product/list 【例如： [HOST](#通用)/admin/user/product/add?user_id=您的user_id】
 
 - **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）
 
@@ -2279,7 +2279,7 @@
 
 - **请求方法：** POST
 
-- **接口地址：** [HOST]/remote_config/set 【例如： [HOST]/remote_config/set?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id&config=eyJpc1Nob3ciOnRydWV9，注意：后面的参数写在这里只是方便查看，真的传参要放在POST请求的参数列表里面】
+- **接口地址：** [HOST](#通用)/remote_config/set 【例如： [HOST](#通用)/remote_config/set?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id&config=eyJpc1Nob3ciOnRydWV9，注意：后面的参数写在这里只是方便查看，真的传参要放在POST请求的参数列表里面】
 
 - **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）；secret：应用的secret，可从应用列表获取；product_id：应用的product_id，可从应用列表获取；config：在线参数的值，这里建议传递json串，特别注意，这个参数需要base64加密之后传给后端，否则会出错。
 
@@ -2301,7 +2301,7 @@
 
 - **接口说明：** 获取指定应用的在线参数。
 
-- **接口地址：** [HOST]/remote_config/get 【例如： [HOST]/remote_config/get?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id】
+- **接口地址：** [HOST](#通用)/remote_config/get 【例如： [HOST](#通用)/remote_config/get?user_id=您的user_id&secret=应用的secret&product_id=应用的product_id】
 
 - **参数说明：** user_id：用户id（这个目前不支持自己注册，需要联系管理员给你分配）；secret：应用的secret，可从应用列表获取；product_id：应用的product_id，可从应用列表获取；
 
@@ -2331,7 +2331,7 @@
 
 - **接口说明：** 获取所有新闻类型列表。
 
-- **接口地址：** [HOST]/news/types 【例如： [HOST]/news/types】
+- **接口地址：** [HOST](#通用)/news/types 【例如： [HOST](#通用)/news/types】
 
 - **参数说明：** 无
 
@@ -2364,7 +2364,7 @@
 
 - **接口说明：** 获取所有新闻类型列表。
 
-- **接口地址：** [HOST]/news/list【例如： [HOST]/news/list?typeId=509&page=1】
+- **接口地址：** [HOST](#通用)/news/list【例如： [HOST](#通用)/news/list?typeId=509&page=1】
 
 - **参数说明：** typeId：类型id，从上面的新闻类型列表中获取，page：当前页数
 
@@ -2404,7 +2404,7 @@
 
 - **接口说明：** 根据新闻id获取新闻详情。
 
-- **接口地址：** [HOST]/news/details【例如： [HOST]/news/details?newsId=EJA5MJQ30001875N】
+- **接口地址：** [HOST](#通用)/news/details【例如： [HOST](#通用)/news/details?newsId=EJA5MJQ30001875N】
 
 - **参数说明：** newsId：新闻唯一id，从上面的新闻列表中获取
 
@@ -2449,7 +2449,7 @@
 
 - **接口说明：** 查询指定物品垃圾分类信息。
 
-- **接口地址：** [HOST]/rubbish/type 【例如： [HOST]/rubbish/type?name=西瓜】
+- **接口地址：** [HOST](#通用)/rubbish/type 【例如： [HOST](#通用)/rubbish/type?name=西瓜】
 
 - **参数说明：** name：物品名称，必传
 
@@ -2489,7 +2489,7 @@
 
 - **接口说明：** 随机获取福利图片。
 
-- **接口地址：** [HOST]/image/girl/list/random 【例如： [HOST]/image/girl/list/random】
+- **接口地址：** [HOST](#通用)/image/girl/list/random 【例如： [HOST](#通用)/image/girl/list/random】
 
 - **参数说明：** 无
 
@@ -2520,7 +2520,7 @@
 
 - **接口说明：** 获取福利图片列表。
 
-- **接口地址：** [HOST]/image/girl/list 【例如： [HOST]/image/girl/list?page=1】
+- **接口地址：** [HOST](#通用)/image/girl/list 【例如： [HOST](#通用)/image/girl/list?page=1】
 
 - **参数说明：** page：当前页数
 
@@ -2559,7 +2559,7 @@
 
 - **接口说明：** 查询支持的所有快递公司编号列表。
 
-- **接口地址：** [HOST]/logistics/type/list 【例如： [HOST]/logistics/type/list】
+- **接口地址：** [HOST](#通用)/logistics/type/list 【例如： [HOST](#通用)/logistics/type/list】
 
 - **参数说明：** 无
 
@@ -2595,7 +2595,7 @@
 
 - **接口说明：** 根据公司名称查询对应的公司编号。
 
-- **接口地址：** [HOST]/logistics/type/search 【例如： [HOST]/logistics/type/search?name=韵达】
+- **接口地址：** [HOST](#通用)/logistics/type/search 【例如： [HOST](#通用)/logistics/type/search?name=韵达】
 
 - **参数说明：** name：被查询的公司名称
 
@@ -2630,7 +2630,7 @@
 
 - **接口说明：** 根据快递单号识别出所属快递公司编号。
 
-- **接口地址：** [HOST]/logistics/discern 【例如： [HOST]/logistics/discern?logistics_no=804967979558203287】
+- **接口地址：** [HOST](#通用)/logistics/discern 【例如： [HOST](#通用)/logistics/discern?logistics_no=804967979558203287】
 
 - **参数说明：** logistics_no：被查询的快递单号
 
@@ -2663,7 +2663,7 @@
 
 - **接口说明：** 根据快递单号以及物流公司id查询物流信息。
 
-- **接口地址：** [HOST]/logistics/details/search 【例如： [HOST]/logistics/details/search?logistics_no=804967979558203287&logistics_id=5】
+- **接口地址：** [HOST](#通用)/logistics/details/search 【例如： [HOST](#通用)/logistics/details/search?logistics_no=804967979558203287&logistics_id=5】
 
 - **参数说明：** logistics_no：被查询的快递单号，logistics_id：单号对应的物流id
 
@@ -2709,7 +2709,7 @@
 
 - **接口说明：** 获取已经收录的历史上的今天的所有数据。
 
-- **接口地址：** [HOST]/history/today 【例如： [HOST]/history/today?type=1】
+- **接口地址：** [HOST](#通用)/history/today 【例如： [HOST](#通用)/history/today?type=1】
 
 - **参数说明：** type：是否需要详情，0：不需要详情 1：需要详情 默认值 0 可不传
 
@@ -2750,7 +2750,7 @@
 
 - **接口说明：** 简体与繁体的相互转换。
 
-- **接口地址：** [HOST]/convert/zh 【例如： [HOST]/convert/zh?content=当你老了&type=1】
+- **接口地址：** [HOST](#通用)/convert/zh 【例如： [HOST](#通用)/convert/zh?content=当你老了&type=1】
 
 - **参数说明：** 
 
@@ -2784,7 +2784,7 @@
 
 - **接口说明：** 将一种语种翻译成另外一种语种。
 
-- **接口地址：** [HOST]/convert/translate 【例如： [HOST]/convert/translate?content=我是一个好人&from=zh&to=en】
+- **接口地址：** [HOST](#通用)/convert/translate 【例如： [HOST](#通用)/convert/translate?content=我是一个好人&from=zh&to=en】
 
 - **参数说明：** 
 
@@ -2823,7 +2823,7 @@
 #### **查询单个汉字的读音和含义**
 
 - **接口说明：** 查询单个汉字的读音和含义。
-- **接口地址：** [HOST]/convert/dictionary 【例如： [HOST]/convert/dictionary?content=穆】
+- **接口地址：** [HOST](#通用)/convert/dictionary 【例如： [HOST](#通用)/convert/dictionary?content=穆】
 - **参数说明：** 
 
   - **content：** 被查询的汉字内容
@@ -2860,7 +2860,7 @@
 #### **每日推荐精美语句**
 
 - **接口说明：** 每日推荐精美语句。
-- **接口地址：** [HOST]/daily_word/recommend 【例如： [HOST]/daily_word/recommend?count=10】
+- **接口地址：** [HOST](#通用)/daily_word/recommend 【例如： [HOST](#通用)/daily_word/recommend?count=10】
 - **参数说明：** 
   - **count：** 被查询的语句条数，范围【1~20】
 - **返回数据：** 

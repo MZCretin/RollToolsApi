@@ -178,9 +178,13 @@
 
 ## 更新记录
 
+**2021-09-27 17:57:00**
+
++ 新增实时汇率接口 [实时汇率](https://www.mxnzp.com/doc/detail?id=27)
+
 **2021-09-24 19:46:14**
 
-+ 新增生成短链功能 [URL生成短链接](https://www.mxnzp.com/doc/detail?id=26)
++ 新增生成短链接口 [URL生成短链接](https://www.mxnzp.com/doc/detail?id=26)
 
 **2020-06-08 16:36:29**
 

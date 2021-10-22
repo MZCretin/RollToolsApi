@@ -178,6 +178,10 @@
 
 ## 更新记录
 
+**2021-10-21 14:14:00**
+
++ 节假日及万年历相关接口新增ignoreHoliday字段 [节假日及万年历](https://www.mxnzp.com/doc/detail?id=1)
+
 **2021-10-02 18:12:00**
 
 + 新增驾考题库接口 [驾考题库](https://www.mxnzp.com/doc/detail?id=29)

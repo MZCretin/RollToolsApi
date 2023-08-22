@@ -29,6 +29,8 @@
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="400" height="400" src="./png/xcx.jpeg"/></div>
 
+[![Stargazers over time](https://starchart.cc/MZCretin/RollToolsApi.svg)](https://starchart.cc/MZCretin/RollToolsApi)
+
 ## 特别声明
 
 **最近问的一个比较多的问题就是，接口访问404，在这里我想说，请各位大佬仔细阅读文档，仔细阅读文档，仔细阅读文档，尤其是"通用"模块的文档，我们的Host地址是域名+/api（https://www.mxnzp.com/api），不是纯域名，不要再来问题这个问题了。。。一个正常的请求应该是 https://www.mxnzp.com/api/xxxxx**

@@ -29,7 +29,11 @@
 
 <div style="background:#e3e3e3; color:#FFF" align=center ><img width="400" height="400" src="./png/xcx.jpeg"/></div>
 
+
+## Stargazers over time
+
 [![Stargazers over time](https://starchart.cc/MZCretin/RollToolsApi.svg)](https://starchart.cc/MZCretin/RollToolsApi)
+
 
 ## 特别声明
 

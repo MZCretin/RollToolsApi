@@ -188,6 +188,26 @@
 
 ## 更新记录
 
+**2023-10-12 22:23:08**
+
++ 新增菜谱大全接口，[菜谱大全查询](https://www.mxnzp.com/doc/detail?id=37)
+
+**2023-09-20 12:11:42**
+
++ 新增歇后语大全接口，[歇后语大全查询](https://www.mxnzp.com/doc/detail?id=36)
+
+**2023-09-12 14:42:11**
+
++ 新增成语大全接口，[成语大全查询](https://www.mxnzp.com/doc/detail?id=35)
+
+**2023-02-28 17:52🕠2**
+
++ 新增今日油价查询接口，[今日油价查询](https://www.mxnzp.com/doc/detail?id=34)
+
+**2022-07-01 08:32:17**
+
++ 新增ICP域名备案查询接口，[ICP域名备案查询](https://www.mxnzp.com/doc/detail?id=33)
+
 **2021-12-07 23:47:22**
 
 + 新增查询食物热量接口， [食物热量、卡路里查询](https://www.mxnzp.com/doc/detail?id=32)

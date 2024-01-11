@@ -4,7 +4,7 @@
 想没想过自己做个APP，自己做自己的产品，自己决定交互，自己制作ui，那么快来吧，我开源了段子乐APP的数据和接口，你完全可以自己diy一个你自己的产品了~，详情请查看：https://github.com/MZCretin/duanzile-open-api 欢迎star
 
 ### [全平台国际化话翻译解决方案](https://github.com/MZCretin/Eva-Translate)
-项目国家化翻译解决方案，支持Android、iOS、Flutter、前端Vue、后端PHP等等，点几下按钮就能实现翻译内容的自动抓取和翻译后文件的自动生成，适合各类场景下的国家化需求。
+项目国际化翻译解决方案，支持Android、iOS、Flutter、前端Vue、后端PHP等等，点几下按钮就能实现翻译内容的自动抓取和翻译后文件的自动生成，适合各类场景下的国际化需求。
 
 ### 大道至简系列
 [需求解决系列之-【系列工具概览】](https://juejin.im/post/5ed6174f51882542fb06d850)

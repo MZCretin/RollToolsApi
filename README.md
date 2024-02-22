@@ -56,11 +56,11 @@
 ## 更新记录
 **2024-02-21 19:12:08**
 
-+ 新增用户体系套件接口，[菜谱大全查询](https://www.mxnzp.com/doc/detail?id=39)
++ 新增用户体系套件接口，[用户体系套件查询](https://www.mxnzp.com/doc/detail?id=39)
 
 **2023-11-29 14:23:01**
 
-+ 新增故事大全接口，[菜谱大全查询](https://www.mxnzp.com/doc/detail?id=38)
++ 新增故事大全接口，[故事大全查询](https://www.mxnzp.com/doc/detail?id=38)
 
 **2023-10-12 22:23:08**
 
